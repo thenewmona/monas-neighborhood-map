@@ -70,8 +70,41 @@ Got my markup done, it's working ok, now trying to figure out how to compile it 
 Tried to put all the cordinates into App.js, and had over 175 errors 
 installed google-maps-react - reactDom and reactRouter 
 
+can not do a branch checkout to get back to the master branch 
+Had issues last night, when I was trying to show dan my project because I could not see the map api branch 
+but now I can push/pull/checkout 
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git map-api
+error: src refspec map-api does not match any.
+error: failed to push some refs to 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git
+fatal: Invalid refspec 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git
+fatal: Invalid refspec 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git checkout master
+fatal: unable to read tree de3f64d50b21375eef6e5ad1e3312c2190b9df81
+
+https://stackoverflow.com/questions/20870895/how-to-diagnose-and-fix-git-fatal-unable-to-read-tree?lq=1
+just going to start over from scratch, this project is foobared 
+
 12/13/2018 
 recreating project - to many issues to troubleshoot 
 starting fresh again 
 new project name is monas-neighborhood-map
 following [Elharony walkthrough](https://www.youtube.com/watch?v=ywdxLNjhBYw&t=204s) 
+
+12/14/2018 
+
+worked with Dan on the project 
+There were to many errors in the project so recreated the project, and put it on the c drive and took it out of Google drive 
+Recloned the project hope to get rid of the GIT errors 
+
+12/15/2018
+activated my extension and starting on the REACT lesson per Dan's suggestions 
