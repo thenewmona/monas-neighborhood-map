@@ -108,3 +108,11 @@ Recloned the project hope to get rid of the GIT errors
 
 12/15/2018
 activated my extension and starting on the REACT lesson per Dan's suggestions 
+
+12/18/2018
+
+getting a info window not defined error message
+
+./src/App.js
+  Line 72:  'infoWindow' is not defined  no-undef
+  Line 74:  'infoWindow' is not defined  no-undef
