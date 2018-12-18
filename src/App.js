@@ -11,8 +11,8 @@ state = {
 } 
 
   componentDidMount(){
-    this.getRaces()
-    this.renderMap()
+    this.getRaces()//calls the foursquare API
+    // this.renderMap()
   }
 //this is to load the script
   renderMap = () => {
@@ -20,7 +20,7 @@ state = {
 window.initMap = this.initMap //this is to make the map visible 
 
   }
-
+//foursquares API for right now, hopefully change to Athlinks API 
   getRaces = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
@@ -34,7 +34,7 @@ window.initMap = this.initMap //this is to make the map visible
       .then(response =>{
         this.setState({
           races:response.data.response.groups[0].items
-        })
+        },this.renderMap())
         console.log(response.data.response.groups[0].items)
       })
       .catch(error => {
@@ -48,8 +48,21 @@ window.initMap = this.initMap //this is to make the map visible
   const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.9134, lng: -85.7053 },//my city wyoming, mi
     zoom: 8
-  });
+  })
+this.state.races.map(ocrRaces => {//looping over the races inside of the state 
+
+//setting the markers 
+let marker = new window.google.maps.Marker({
+  position:{ lat: ocrRaces.venue.location.lat, lng:ocrRaces.venue.location.lng },//my city wyoming, mi,
+  map: map,
+  title: ocrRaces.venue.name
+});
+});
+
+  
 }
+  
+
 
   render() {
     return (
