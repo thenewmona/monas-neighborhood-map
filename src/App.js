@@ -1,12 +1,17 @@
 // https: //developers.google.com/maps/documentation/javascript/tutorial
 // https: //www.youtube.com/watch?v=ywdxLNjhBYw&t=204s
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
 
 class App extends Component {
+state = {
+  races:[]
+} 
 
   componentDidMount(){
+    this.getRaces()
     this.renderMap()
   }
 //this is to load the script
@@ -14,6 +19,28 @@ class App extends Component {
     scriptLoader('https://maps.googleapis.com/maps/api/js?key=AIzaSyC3cO2soS7YZyFHhQMyg9CYJxKafhTCRVI&callback=initMap')
 window.initMap = this.initMap //this is to make the map visible 
 
+  }
+
+  getRaces = () => {
+    const endPoint = "https://api.foursquare.com/v2/venues/explore?"
+    const parameters = {
+      client_id:"HIRKFSR3XS50SWWU5FBG4DI4LN5PWI0OKKPWW4UDP13ZPHSN",
+      client_secret:"RE4NWN115A1JETCAKMHQTZZ4VOLCMTK2LZNZUPN5K1PEEKOX",
+      query: "outdoors",
+      near:"Michigan",
+      v:"201849548"
+    }
+      axios.get(endPoint + new URLSearchParams(parameters))
+      .then(response =>{
+        this.setState({
+          races:response.data.response.groups[0].items
+        })
+        console.log(response.data.response.groups[0].items)
+      })
+      .catch(error => {
+        console.log("ERROR!!!!" + error)
+      })
+   
   }
 
 //initializing the map
