@@ -7,11 +7,11 @@ import axios from 'axios'
 
 class App extends Component {
 state = {
-  races:[]
+  museums:[]
 } 
 
   componentDidMount(){
-    this.getRaces()//calls the foursquare API
+    this.getMuseums()//calls the foursquare API
     // this.renderMap()
   }
 //this is to load the script
@@ -21,19 +21,19 @@ window.initMap = this.initMap //this is to make the map visible
 
   }
 //foursquares API for right now, hopefully change to Athlinks API 
-  getRaces = () => {
+  getMuseums = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
       client_id:"HIRKFSR3XS50SWWU5FBG4DI4LN5PWI0OKKPWW4UDP13ZPHSN",
       client_secret:"RE4NWN115A1JETCAKMHQTZZ4VOLCMTK2LZNZUPN5K1PEEKOX",
-      query: "outdoors",
-      near:"Michigan",
+      query: "museums",
+      near:"Grand Rapids",
       v:"201849548"
     }
       axios.get(endPoint + new URLSearchParams(parameters))
       .then(response =>{
         this.setState({
-          races:response.data.response.groups[0].items
+          museums:response.data.response.groups[0].items
         },this.renderMap())
         console.log(response.data.response.groups[0].items)
       })
@@ -49,13 +49,13 @@ window.initMap = this.initMap //this is to make the map visible
     center: { lat: 42.9134, lng: -85.7053 },//my city wyoming, mi
     zoom: 8
   })
-this.state.races.map(ocrRaces => {//looping over the races inside of the state 
+this.state.museums.map(grMuseums => {//looping over the races inside of the state 
 
 //setting the markers 
 let marker = new window.google.maps.Marker({
-  position:{ lat: ocrRaces.venue.location.lat, lng:ocrRaces.venue.location.lng },//my city wyoming, mi,
+  position:{ lat: grMuseums.venue.location.lat, lng:grMuseums.venue.location.lng },//my city wyoming, mi,
   map: map,
-  title: ocrRaces.venue.name
+  title: grMuseums.venue.name
 });
 });
 
