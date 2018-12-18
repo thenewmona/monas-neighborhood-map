@@ -51,6 +51,7 @@ window.initMap = this.initMap //this is to make the map visible
   })
 this.state.museums.map(grMuseums => {//looping over the races inside of the state 
 
+  
 //setting the markers 
 let marker = new window.google.maps.Marker({
   position:{ lat: grMuseums.venue.location.lat, lng:grMuseums.venue.location.lng },//my city wyoming, mi,
@@ -58,11 +59,8 @@ let marker = new window.google.maps.Marker({
   title: grMuseums.venue.name
 });
 });
-
   
-}
-  
-
+} 
 
   render() {
     return (
