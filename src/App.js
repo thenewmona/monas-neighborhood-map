@@ -53,9 +53,10 @@ window.initMap = this.initMap //this is to make the map visible
   })
 
   //InfoWindow
-  let InfoWindow = new window.google.maps.infoWindow()
+  let Infowindow = new window.google.maps.infoWindow()
 
-this.state.museums.map(grMuseums => {//looping over the races inside of the state 
+  //looping over the races inside of the state 
+this.state.museums.map(grMuseums => {
 
   let contentString = `${grMuseums.venue.name}`
   
@@ -70,9 +71,9 @@ let marker = new window.google.maps.Marker({
 
 marker.addListener('click',function(){
   // infoWindow content 
-  infoWindow.setContenet(contentString)
+  infowindow.setContenet(contentString)
   //show infoWindow
-  infoWindow.open(map, marker)
+  infowindow.open(map, marker)
 })
 })
   
