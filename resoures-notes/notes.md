@@ -108,3 +108,16 @@ Recloned the project hope to get rid of the GIT errors
 
 12/15/2018
 activated my extension and starting on the REACT lesson per Dan's suggestions 
+
+12/17/2018
+
+added foursquares API
+have the markers for GR museums showing up 
+Sent in a request for Athlinks API access 
+tomorrow infoWindow
+
+12/18/2018
+
+Created infoWindow branch having some issues and did not want to mess up my master whick is working perfect
+need to clean up some of my comments 
+I am still error free 
