@@ -14,6 +14,7 @@ state = {
     this.getMuseums()//calls the foursquare API
     // this.renderMap()
   }
+
 //this is to load the script
   renderMap = () => {
     scriptLoader('https://maps.googleapis.com/maps/api/js?key=AIzaSyC3cO2soS7YZyFHhQMyg9CYJxKafhTCRVI&callback=initMap')
@@ -30,6 +31,7 @@ window.initMap = this.initMap //this is to make the map visible
       near:"Grand Rapids",
       v:"201849548"
     }
+
       axios.get(endPoint + new URLSearchParams(parameters))
       .then(response =>{
         this.setState({
@@ -39,18 +41,23 @@ window.initMap = this.initMap //this is to make the map visible
       })
       .catch(error => {
         console.log("ERROR!!!!" + error)
-      })
-   
+      })   
   }
 
 //initializing the map
    initMap = () => {
+     //create the map centering it on my house 
   const map = new window.google.maps.Map(document.getElementById('map'), {
-    center: { lat: 42.9134, lng: -85.7053 },//my city wyoming, mi
+    center: { lat: 42.9134, lng: -85.7053 },//my home wyoming, mi
     zoom: 8
   })
+
+  //InfoWindow
+  let InfoWindow = new window.google.maps.infoWindow()
+
 this.state.museums.map(grMuseums => {//looping over the races inside of the state 
 
+  let contentString = `${grMuseums.venue.name}`
   
 //setting the markers 
 let marker = new window.google.maps.Marker({
@@ -58,7 +65,16 @@ let marker = new window.google.maps.Marker({
   map: map,
   title: grMuseums.venue.name
 });
-});
+
+//marker eventlistener
+
+marker.addListener('click',function(){
+  // infoWindow content 
+  infoWindow.setContenet(contentString)
+  //show infoWindow
+  infoWindow.open(map, marker)
+})
+})
   
 } 
 

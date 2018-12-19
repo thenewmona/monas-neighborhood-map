@@ -121,3 +121,10 @@ tomorrow infoWindow
 Created infoWindow branch having some issues and did not want to mess up my master whick is working perfect
 need to clean up some of my comments 
 I am still error free 
+12/18/2018
+
+getting a info window not defined error message
+
+./src/App.js
+  Line 72:  'infoWindow' is not defined  no-undef
+  Line 74:  'infoWindow' is not defined  no-undef
