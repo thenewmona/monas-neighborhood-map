@@ -128,3 +128,8 @@ getting a info window not defined error message
 ./src/App.js
   Line 72:  'infoWindow' is not defined  no-undef
   Line 74:  'infoWindow' is not defined  no-undef
+
+12/19/2018
+
+This is getting really frustrating, had this thing working at work, but I am now still getting infoWindow not defined at home 
+This is driving me crazy 
