@@ -4,19 +4,6 @@ import './App.css'
 import axios from 'axios'
 
 class App extends Component {
-<<<<<<< HEAD
-  state = {
-    museums: []
-  }
-
-  componentDidMount() {
-    this.getMuseums()//calls the foursquare API
-    // this.renderMap()
-  }
-
-  renderMap = () => {
-    scriptloader("https://maps.googleapis.com/maps/api/js?key=AIzaSyC3cO2soS7YZyFHhQMyg9CYJxKafhTCRVI&callback=initMap")
-=======
 
 
   state = {//per drunkenkismister 12/18/2018
@@ -30,8 +17,7 @@ class App extends Component {
   }
 
   renderMap = () => {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
->>>>>>> 57cf0b1dfaf3262ca63fb9a8790aa923b54b5cb3
+    scriptLoader("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
     window.initMap = this.initMap
   }
 
@@ -54,16 +40,6 @@ class App extends Component {
       .catch(error => {
         console.log("ERROR!! " + error)
       })
-<<<<<<< HEAD
-
-  }
-//initializing the map
-  initMap = () => {
-
-    //create the map centering it on my house 
-    var map = new window.google.maps.Map(document.getElementById('map'), {
-      center: { lat: 42.9134, lng: -85.7053 },//my home wyoming, mi
-=======
 
   }
 
@@ -72,40 +48,35 @@ class App extends Component {
     // Create A Map
    const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.96, lng: -85.7053 },//my home wyoming, mi
->>>>>>> 57cf0b1dfaf3262ca63fb9a8790aa923b54b5cb3
       zoom: 8
     })
 
     // Create An InfoWindow
-<<<<<<< HEAD
     let infowindow = new window.google.maps.InfoWindow()
-=======
-   let infowindow = new window.google.maps.InfoWindow()
->>>>>>> 57cf0b1dfaf3262ca63fb9a8790aa923b54b5cb3
+
+    //marker boundaries
+    //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
+
+    let bounds = new window.google.mpas.LatLngBounds();
+
 
     // Display Dynamic Markers
     this.state.museums.map(grMuseums => {
-
-<<<<<<< HEAD
-      let contentString = `${grMuseums.venue.name}`
-
-      // setting the markers
-      let marker = new window.google.maps.Marker({
-        position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
-        map: map,
-        // title:grMuseums.venue.name
-=======
       var contentString = `${grMuseums.venue.name}`
 
       // Create A Marker
-      var marker = new window.google.maps.Marker({
+      var marker = new window.google.maps.Marker({        
         position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
         map: map,
-        title: grMuseums.venue.name
->>>>>>> 57cf0b1dfaf3262ca63fb9a8790aa923b54b5cb3
+        title: grMuseums.venue.name,
+       
       })
 
-      // Click on A Marker!
+      //extending the marker bounds 
+      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+      bounds.extend(markLoc)
+
+      // marker eventlistener
       marker.addListener('click', function() {
 
         // Change the content
@@ -114,6 +85,10 @@ class App extends Component {
         // Open An InfoWindow
         infowindow.open(map, marker)
       })
+      map.fitBounds(bounds);
+		 map.panTo(bounds.getCenter());
+		 map.setZoom(map.getZoom()-1); 
+		 return marker;
 
     })
 
@@ -130,13 +105,9 @@ class App extends Component {
   }
 }
 
-<<<<<<< HEAD
-function scriptloader(url) {
-=======
-function loadScript(url) {
->>>>>>> 57cf0b1dfaf3262ca63fb9a8790aa923b54b5cb3
-  var index  = window.document.getElementsByTagName("script")[0]
-  var script = window.document.createElement("script")
+function scriptLoader(url) {
+  let index  = window.document.getElementsByTagName("script")[0]
+  let script = window.document.createElement("script")
   script.src = url
   script.async = true
   script.defer = true

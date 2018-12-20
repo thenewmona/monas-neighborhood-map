@@ -133,3 +133,20 @@ getting a info window not defined error message
 
 This is getting really frustrating, had this thing working at work, but I am now still getting infoWindow not defined at home 
 This is driving me crazy 
+
+12/20/2018
+
+[React Bounds Element Queries in React](https://www.npmjs.com/package/react-bounds)
+
+[Create Google Maps with markers for places](https://blog.dnnsharp.com/1001/30-create-google-maps-with-markers-for-places)
+
+[google reference for marker boundaries](https://developers.google.com/maps/documentation/javascript/reference/map?fbclid=IwAR1gmPJXyxTRZFlxR5osZUYEFM9xxFIvFsa5LlKOGg6whXSmnYk-LkIGqzo#Map.getBounds)
+getBounds	
+getBounds()
+Parameters:  None
+Return Value:  LatLngBounds
+Returns the lat/lng bounds of the current viewport. If more than one copy of the world is visible, the bounds range in longitude from -180 to 180 degrees inclusive. If the map is not yet initialized (i.e. the mapType is still null), or center and zoom have not been set then the result is null or undefined.
+
+[error reporting ](https://stackoverflow.com/questions/9860823/js-loading-script-error)
+
+Set up bounds, need to test that they are functioning 
