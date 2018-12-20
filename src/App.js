@@ -57,7 +57,7 @@ class App extends Component {
     //marker boundaries
     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
 
-    let bounds = new window.google.mpas.LatLngBounds();
+    let bounds = new window.google.maps.LatLngBounds();
 
 
     // Display Dynamic Markers

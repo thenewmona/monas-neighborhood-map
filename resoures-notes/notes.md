@@ -149,4 +149,35 @@ Returns the lat/lng bounds of the current viewport. If more than one copy of the
 
 [error reporting ](https://stackoverflow.com/questions/9860823/js-loading-script-error)
 
-Set up bounds, need to test that they are functioning 
+Set up bounds, 
+getting the following error message 
+
+  73 |      })
+  74 | 
+  75 |      //extending the marker bounds 
+> 76 |      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+     | ^  77 |      bounds.extend(markLoc)
+  78 | 
+  79 |      // marker eventlistener
+View compiled
+App._this.initMap
+C:/source/monas-neighborhood-map/src/App.js:64
+  61 | 
+  62 | 
+  63 |    // Display Dynamic Markers
+> 64 |    this.state.museums.map(grMuseums => {
+     | ^  65 |      var contentString = `${grMuseums.venue.name}`
+  66 | 
+  67 |      // Create A Marker
+
+  ## Console error 
+
+  Uncaught (in promise) TypeError: Cannot read property 'lat' of undefined
+    at App.js:76
+    at Array.map (<anonymous>)
+    at App._this.initMap (App.js:64)
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+localhost/:1 Access to fetch at 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+[Error: No 'Access-Control-Allow-Origin' header is present on the requested resource ](https://community.powerbi.com/t5/Developer/Error-No-Access-Control-Allow-Origin-header-is-present-on-the/td-p/350280)
