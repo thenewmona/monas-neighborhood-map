@@ -1,33 +1,26 @@
-// https: //developers.google.com/maps/documentation/javascript/tutorial
-// https: //www.youtube.com/watch?v=ywdxLNjhBYw&t=204s
-import React, { Component } from "react";
-// import logo from './logo.svg';
-import "./App.css";
-import axios from "axios"
+import React, { Component } from 'react'
+import './App.css'
+
+import axios from 'axios'
 
 class App extends Component {
-  n
-state = {//Help from Drunkmeister with this on 12/19/2018
-  museums:[],
+
+
+  state = {//per drunkenkismister 12/18/2018
+        museums:[],
   map:null,
   infoWindow:null,
-};
-
+  }
 
   componentDidMount() {
     this.getMuseums();//calls the foursquare API
-    // this.renderMap()
   }
 
-//this is to load the script
   renderMap = () => {
+    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
+    window.initMap = this.initMap
+  }
 
-    scriptLoader('https://maps.googleapis.com/maps/api/js?key=AIzaSyC3cO2soS7YZyFHhQMyg9CYJxKafhTCRVI&callback=initMap'
-    );
-    
-window.initMap = this.initMap //this is to make the map visible 
-  };
-//foursquares API for right now, hopefully change to Athlinks API 
   getMuseums = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?";
     const parameters = {
@@ -38,91 +31,73 @@ window.initMap = this.initMap //this is to make the map visible
       v:"201849548"
     }
 
-      axios.get(endPoint + new URLSearchParams(parameters))
-      .then(response =>{
+    axios.get(endPoint + new URLSearchParams(parameters))
+      .then(response => {
         this.setState({
-          museums:response.data.response.groups[0].items
-        },
-        this.renderMap()
-        );
-        console.log(response.data.response.groups[0].items)
+          museums: response.data.response.groups[0].items
+        }, this.renderMap())
       })
       .catch(error => {
-        console.log("ERROR!!!!" + error)
-      });
-  };
+        console.log("ERROR!! " + error)
+      })
 
-//initializing the map
-   initMap = () => {
-     //create the map centering it on my house 
-  const map = new window.google.maps.Map(document.getElementById('map'), {
+  }
+
+  initMap = () => {
+
+    // Create A Map
+   const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.96, lng: -85.7053 },//my home wyoming, mi
-    zoom: 8
-  })
+      zoom: 8
+    })
 
-  //InfoWindow
-  let InfoWindow = new window.google.maps.infoWindow();
+    // Create An InfoWindow
+   let infowindow = new window.google.maps.InfoWindow()
 
-  this.setState({
-    map,
-    infoWindow
-  });
+    // Display Dynamic Markers
+    this.state.museums.map(grMuseums => {
 
-  this.initMarkers(map, infoWindow);
-};
+      var contentString = `${grMuseums.venue.name}`
 
-initMarkers = (map,infoWindow) => {
+      // Create A Marker
+      var marker = new window.google.maps.Marker({
+        position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
+        map: map,
+        title: grMuseums.venue.name
+      })
 
-  //looping over the museums inside of the state 
-this.state.museums.map(grMuseums => {
-  let contentString = `${grMuseums.venue.name}`;
-  
-//setting the markers 
-let marker = new window.google.maps.Marker({
-  position:{
-     lat: grMuseums.venue.location.lat,
-      lng:grMuseums.venue.location.lng 
-    },//my city wyoming, mi,
-  map: map,
-  title: grMuseums.venue.name,
-  name: grMuseums.venue.name,
-  venue: grMuseums.venue,
-  draggable: false,
-  animation: window.google.maps.Animation.drop,
-});
+      // Click on A Marker!
+      marker.addListener('click', function() {
 
-//marker eventlistener
+        // Change the content
+        infowindow.setContent(contentString)
 
-marker.addListener('click',function(){
-  // infoWindow content 
-  infoWindow.setContenet(contentString);
-  //show infoWindow
-  infoWindow.open(map, marker);
-});
-});  
-}; 
+        // Open An InfoWindow
+        infowindow.open(map, marker)
+      })
+
+    })
+
+    
+
+  }
 
   render() {
     return (
-      <main>      
-      <div id = "map"></div>
+      <main>
+        <div id="map"></div>
       </main>
-     );
-    }
-     }   
+    )
+  }
+}
 
-     /*</script >
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    async defer></script>*/
+function loadScript(url) {
+  var index  = window.document.getElementsByTagName("script")[0]
+  var script = window.document.createElement("script")
+  script.src = url
+  script.async = true
+  script.defer = true
+  index.parentNode.insertBefore(script, index)
+}
 
-    function scriptLoader(url){
-      let index =window.document.getElementsByTagName("script")[0]
-      let script = window.document.createElement("script")
-      script.src = url
-      script.async = true
-      script.defer = true
-      index.parentNode.insertBefore(script, index)//this is being used instead of using appendChild
-    }
-        
-    
-    export default App;
+export default App;
