@@ -64,9 +64,9 @@ this.state.museums.map(grMuseums => {
 let marker = new window.google.maps.Marker({
   position:{ lat: grMuseums.venue.location.lat, lng:grMuseums.venue.location.lng },//my city wyoming, mi,
   map: map,
-  title: grMuseums.venue.name
-  name: myVenue.venue.name,
-  venue: myVenue.venue,
+  title: grMuseums.venue.name,
+  name: grMuseums.venue.name,
+  venue: grMuseums.venue,
   draggable: false,
   animation: window.google.maps.Animation.drop,
 });
