@@ -133,3 +133,46 @@ getting a info window not defined error message
 
 This is getting really frustrating, had this thing working at work, but I am now still getting infoWindow not defined at home 
 This is driving me crazy 
+
+## Notes from drunkenkismet 
+
+changed Lat on map and added notes for Mona
+
+@drunkenkismet
+drunkenkismet committed an hour ago
+commit 6605df5119314ccce71a6ccfff7c3f68fac7157d
+     
+17  src/App.js
+@@ -55,13 +55,26 @@ class App extends Component {
+  initMap = () => {
+    //create the map centering it on my house
+    const map = new window.google.maps.Map(document.getElementById("map"), {
+      center: { lat: 42.9134, lng: -85.7053 }, //my home wyoming, mi
+      zoom: 8
+      center: { lat: 42.96, lng: -85.7053 }, //my home wyoming, mi
+      zoom: 13
+    });
+
+    //InfoWindow
+    const infoWindow = new window.google.maps.InfoWindow();
+
+    // you'll want access to these later, outside these methods, when you create your sidebar
+    // reference them outside this method as:
+    /*
+      const { map, infoWindow } = this.state;
+      infoWindow.open(map, marker); // for example
+    */
+
+    // you should also create a `bounds` object and store it in state.
+    // the Google docs explain the usefulness of the Bounds constructor --
+    // for each marker you create, you can basically use LatLngBounds to ensure the
+    // markers all stay visible within the viewport (bounds will extends or contract based on where
+    // each new marker appears on the map).
+
+    this.setState({
+      map,
+      infoWindow
+
+[How to write your first React.js component](https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc)
+
+[How To Use The React Context API](https://medium.com/flatiron-labs/how-to-use-the-react-context-api-70a76d3974d5)

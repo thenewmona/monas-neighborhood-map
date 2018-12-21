@@ -38,7 +38,8 @@ class App extends Component {
         }, this.renderMap())
       })
       .catch(error => {
-        console.log("ERROR!! " + error)
+        alert(`Sorry, for the incovience`)
+        console.log("apologize for the inconvience the following error has occured " + error)
       })
 
   }
@@ -49,6 +50,7 @@ class App extends Component {
    const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.96, lng: -85.7053 },//my home wyoming, mi
       zoom: 8
+      // url:"https://image.flaticon.com/icons/svg/1243/1243565.svg"
     })
 
     // Create An InfoWindow
@@ -56,15 +58,31 @@ class App extends Component {
 
     // Display Dynamic Markers
     this.state.museums.map(grMuseums => {
-
       var contentString = `${grMuseums.venue.name}`
+      
 
       // Create A Marker
+      // markerIcon = (grMuseums) => {
+      //   //makes custom marker icon
+      //   var markerIcon = {
+      //   url: 'https://img.icons8.com/nolan/2x/museum.png',
+      //   scaledSize: new window.google.maps.Size(60, 60),
+      //   origin: new window.google.maps.Point(0, 0), 
+      //   };
+
       var marker = new window.google.maps.Marker({
         position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
         map: map,
-        title: grMuseums.venue.name
-      })
+        title: grMuseums.venue.name,
+        id: grMuseums.venue.id,
+        name: grMuseums.venue.name,
+        venue: grMuseums.venue,
+        draggable: false,
+        animation: window.google.maps.Animation.drop,
+        icon:"https://img.icons8.com/nolan/2x/museum.png",//image size 144x144
+        scaledSize: new window.google.maps.Size(20, 20),
+        origin: new window.google.maps.Point(0, 0), 
+      });
 
       // Click on A Marker!
       marker.addListener('click', function() {
