@@ -134,45 +134,50 @@ getting a info window not defined error message
 This is getting really frustrating, had this thing working at work, but I am now still getting infoWindow not defined at home 
 This is driving me crazy 
 
-## Notes from drunkenkismet 
+12/20/2018
 
-changed Lat on map and added notes for Mona
+[React Bounds Element Queries in React](https://www.npmjs.com/package/react-bounds)
 
-@drunkenkismet
-drunkenkismet committed an hour ago
-commit 6605df5119314ccce71a6ccfff7c3f68fac7157d
-     
-17  src/App.js
-@@ -55,13 +55,26 @@ class App extends Component {
-  initMap = () => {
-    //create the map centering it on my house
-    const map = new window.google.maps.Map(document.getElementById("map"), {
-      center: { lat: 42.9134, lng: -85.7053 }, //my home wyoming, mi
-      zoom: 8
-      center: { lat: 42.96, lng: -85.7053 }, //my home wyoming, mi
-      zoom: 13
-    });
+[Create Google Maps with markers for places](https://blog.dnnsharp.com/1001/30-create-google-maps-with-markers-for-places)
 
-    //InfoWindow
-    const infoWindow = new window.google.maps.InfoWindow();
+[google reference for marker boundaries](https://developers.google.com/maps/documentation/javascript/reference/map?fbclid=IwAR1gmPJXyxTRZFlxR5osZUYEFM9xxFIvFsa5LlKOGg6whXSmnYk-LkIGqzo#Map.getBounds)
+getBounds	
+getBounds()
+Parameters:  None
+Return Value:  LatLngBounds
+Returns the lat/lng bounds of the current viewport. If more than one copy of the world is visible, the bounds range in longitude from -180 to 180 degrees inclusive. If the map is not yet initialized (i.e. the mapType is still null), or center and zoom have not been set then the result is null or undefined.
 
-    // you'll want access to these later, outside these methods, when you create your sidebar
-    // reference them outside this method as:
-    /*
-      const { map, infoWindow } = this.state;
-      infoWindow.open(map, marker); // for example
-    */
+[error reporting ](https://stackoverflow.com/questions/9860823/js-loading-script-error)
 
-    // you should also create a `bounds` object and store it in state.
-    // the Google docs explain the usefulness of the Bounds constructor --
-    // for each marker you create, you can basically use LatLngBounds to ensure the
-    // markers all stay visible within the viewport (bounds will extends or contract based on where
-    // each new marker appears on the map).
+Set up bounds, 
+getting the following error message 
 
-    this.setState({
-      map,
-      infoWindow
+  73 |      })
+  74 | 
+  75 |      //extending the marker bounds 
+> 76 |      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+     | ^  77 |      bounds.extend(markLoc)
+  78 | 
+  79 |      // marker eventlistener
+View compiled
+App._this.initMap
+C:/source/monas-neighborhood-map/src/App.js:64
+  61 | 
+  62 | 
+  63 |    // Display Dynamic Markers
+> 64 |    this.state.museums.map(grMuseums => {
+     | ^  65 |      var contentString = `${grMuseums.venue.name}`
+  66 | 
+  67 |      // Create A Marker
 
-[How to write your first React.js component](https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc)
+  ## Console error 
 
-[How To Use The React Context API](https://medium.com/flatiron-labs/how-to-use-the-react-context-api-70a76d3974d5)
+  Uncaught (in promise) TypeError: Cannot read property 'lat' of undefined
+    at App.js:76
+    at Array.map (<anonymous>)
+    at App._this.initMap (App.js:64)
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+localhost/:1 Access to fetch at 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+[Error: No 'Access-Control-Allow-Origin' header is present on the requested resource ](https://community.powerbi.com/t5/Developer/Error-No-Access-Control-Allow-Origin-header-is-present-on-the/td-p/350280)

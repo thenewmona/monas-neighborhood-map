@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   renderMap = () => {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
+    scriptLoader("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
     window.initMap = this.initMap
   }
 
@@ -54,7 +54,13 @@ class App extends Component {
     })
 
     // Create An InfoWindow
-   let infowindow = new window.google.maps.InfoWindow()
+    let infowindow = new window.google.maps.InfoWindow()
+
+    //marker boundaries
+    //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
+
+    let bounds = new window.google.maps.LatLngBounds();
+
 
     // Display Dynamic Markers
     this.state.museums.map(grMuseums => {
@@ -62,29 +68,18 @@ class App extends Component {
       
 
       // Create A Marker
-      // markerIcon = (grMuseums) => {
-      //   //makes custom marker icon
-      //   var markerIcon = {
-      //   url: 'https://img.icons8.com/nolan/2x/museum.png',
-      //   scaledSize: new window.google.maps.Size(60, 60),
-      //   origin: new window.google.maps.Point(0, 0), 
-      //   };
-
-      var marker = new window.google.maps.Marker({
+      var marker = new window.google.maps.Marker({        
         position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
         map: map,
         title: grMuseums.venue.name,
-        id: grMuseums.venue.id,
-        name: grMuseums.venue.name,
-        venue: grMuseums.venue,
-        draggable: false,
-        animation: window.google.maps.Animation.drop,
-        icon:"https://img.icons8.com/nolan/2x/museum.png",//image size 144x144
-        scaledSize: new window.google.maps.Size(20, 20),
-        origin: new window.google.maps.Point(0, 0), 
-      });
+       
+      })
 
-      // Click on A Marker!
+      //extending the marker bounds 
+      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+      bounds.extend(markLoc)
+
+      // marker eventlistener
       marker.addListener('click', function() {
 
         // Change the content
@@ -93,6 +88,10 @@ class App extends Component {
         // Open An InfoWindow
         infowindow.open(map, marker)
       })
+      map.fitBounds(bounds);
+		 map.panTo(bounds.getCenter());
+		 map.setZoom(map.getZoom()-1); 
+		 return marker;
 
     })
 
@@ -109,9 +108,9 @@ class App extends Component {
   }
 }
 
-function loadScript(url) {
-  var index  = window.document.getElementsByTagName("script")[0]
-  var script = window.document.createElement("script")
+function scriptLoader(url) {
+  let index  = window.document.getElementsByTagName("script")[0]
+  let script = window.document.createElement("script")
   script.src = url
   script.async = true
   script.defer = true
