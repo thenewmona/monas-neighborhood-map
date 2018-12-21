@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
+import header from './components/header';
+import content from './components/content';
 
 import axios from 'axios'
 
@@ -59,7 +61,7 @@ class App extends Component {
     //marker boundaries
     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
 
-    let bounds = new window.google.maps.LatLngBounds();
+    // let bounds = new window.google.maps.LatLngBounds();
 
 
     // Display Dynamic Markers
@@ -76,8 +78,8 @@ class App extends Component {
       })
 
       //extending the marker bounds 
-      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
-      bounds.extend(markLoc)
+      // let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+      // bounds.extend(markLoc)
 
       // marker eventlistener
       marker.addListener('click', function() {
@@ -88,10 +90,10 @@ class App extends Component {
         // Open An InfoWindow
         infowindow.open(map, marker)
       })
-      map.fitBounds(bounds);
-		 map.panTo(bounds.getCenter());
-		 map.setZoom(map.getZoom()-1); 
-		 return marker;
+    //   map.fitBounds(bounds);
+		//  map.panTo(bounds.getCenter());
+		//  map.setZoom(map.getZoom()-1); 
+		//  return marker;
 
     })
 
@@ -102,7 +104,10 @@ class App extends Component {
   render() {
     return (
       <main>
-        <div id="map"></div>
+        <div className ="App">
+        <Header/>
+        <Content />
+        </div>
       </main>
     )
   }
