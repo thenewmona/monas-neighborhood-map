@@ -181,3 +181,8 @@ C:/source/monas-neighborhood-map/src/App.js:64
 localhost/:1 Access to fetch at 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 
 [Error: No 'Access-Control-Allow-Origin' header is present on the requested resource ](https://community.powerbi.com/t5/Developer/Error-No-Access-Control-Allow-Origin-header-is-present-on-the/td-p/350280)
+
+
+12/21/2018
+
+[Neighborhood App - Part 1: Design and Load Google Map API](https://www.youtube.com/watch?v=CCv8JrGVgYQ&list=PLxNdTlMoqzLIajvLvQR9OwcgxNK0GLpmL&index=13)
