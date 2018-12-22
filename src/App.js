@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import header from './components/header';
-import content from './components/content';
+
 
 import axios from 'axios'
 
@@ -104,10 +103,8 @@ class App extends Component {
   render() {
     return (
       <main>
-        <div className ="App">
-        <Header/>
-        <Content />
-        </div>
+       <div clasname = 'museumMap' id="map"></div>
+            
       </main>
     )
   }
