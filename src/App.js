@@ -76,8 +76,8 @@ class App extends Component {
       })
 
       //extending the marker bounds 
-      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
-      bounds.extend(markLoc)
+      // let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+      // bounds.extend(markLoc)
 
       // marker eventlistener
       marker.addListener('click', function() {
@@ -88,10 +88,11 @@ class App extends Component {
         // Open An InfoWindow
         infowindow.open(map, marker)
       })
-      map.fitBounds(bounds);
-		 map.panTo(bounds.getCenter());
-		 map.setZoom(map.getZoom()-1); 
-		 return marker;
+      
+    //   map.fitBounds(bounds);
+		//  map.panTo(bounds.getCenter());
+		//  map.setZoom(map.getZoom()-1); 
+		//  return markLoc;
 
     })
 
