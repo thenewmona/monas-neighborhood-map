@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
+import Mapcontent from './components/Mapcontent'
+
 
 
 import axios from 'axios'

@@ -186,3 +186,24 @@ localhost/:1 Access to fetch at 'https://maps.googleapis.com/maps/api/js?key=AIz
 12/21/2018
 
 [Neighborhood App - Part 1: Design and Load Google Map API](https://www.youtube.com/watch?v=CCv8JrGVgYQ&list=PLxNdTlMoqzLIajvLvQR9OwcgxNK0GLpmL&index=13)
+
+12/22/2018
+[ReactJS - Build a Responsive Navigation Bar & Side Drawer Tutorial](https://www.youtube.com/watch?v=l6nmysZKHFU)
+
+Trying to get my side bar and hamburger working 
+getting the following error message 
+
+Module not found: Can't resolve './components/Toolbar/' in 'C:\source\monas-neighborhood-map\src'
+
+12/23/2018
+
+Still having issues creating my components 
+Went through Ryan's walkthrough, and I am not understanding it. 
+
+getting this error this morning 
+
+## Failed to compile
+./src/App.js
+Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
+
+So much for submitting by Christmas 
