@@ -206,4 +206,39 @@ getting this error this morning
 ./src/App.js
 Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
 
+[Can’t find the module in React.js](https://www.freecodecamp.org/forum/t/cant-find-the-module-in-react-js/234237)
+
+[Module not found: Can't resolve 'react' #2534](https://github.com/facebook/create-react-app/issues/2534)
+
+## Console error message 
+-------------------------------------------------------------
+
+Uncaught Error: Cannot find module './components/Mapcontent'
+    at webpackMissingModule (App.css?da7c:45)
+    at Module../src/App.js (App.css?da7c:45)
+    at __webpack_require__ (bootstrap:782)
+    at fn (bootstrap:150)
+    at Module../src/index.js (index.css?02e3:45)
+    at __webpack_require__ (bootstrap:782)
+    at fn (bootstrap:150)
+    at Object.0 (serviceWorker.js:135)
+    at __webpack_require__ (bootstrap:782)
+    at checkDeferredModules (bootstrap:45)
+    at Array.webpackJsonpCallback [as push] (bootstrap:32)
+    at main.chunk.js:1
+webpackMissingModule @ App.css?da7c:45
+./src/App.js @ App.css?da7c:45
+__webpack_require__ @ bootstrap:782
+fn @ bootstrap:150
+./src/index.js @ index.css?02e3:45
+__webpack_require__ @ bootstrap:782
+fn @ bootstrap:150
+0 @ serviceWorker.js:135
+__webpack_require__ @ bootstrap:782
+checkDeferredModules @ bootstrap:45
+webpackJsonpCallback @ bootstrap:32
+(anonymous) @ main.chunk.js:1
+index.js:1452 ./src/App.js
+Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
+
 So much for submitting by Christmas 
