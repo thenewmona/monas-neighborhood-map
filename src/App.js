@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Mapcontent from './components/Mapcontent'
+// import Mapcontent from './components/Mapcontent'
 
 
 
