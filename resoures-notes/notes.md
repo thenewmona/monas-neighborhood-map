@@ -242,3 +242,11 @@ index.js:1452 ./src/App.js
 Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
 
 So much for submitting by Christmas 
+
+12/27/2018
+
+took a few days off to regroup, and did some tutorials 
+working on scrimba's react course right now https://scrimba.com/p/p7P5Hd/cQ7natG tyring to get my components to work properly 
+
+Feeling really stupid right now, did not put the full path in for the import I am back to no errors now 
+going to bed now

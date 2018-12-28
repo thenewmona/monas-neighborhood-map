@@ -1,5 +1,5 @@
 import React from 'react';
-import Mapcontent from './components/Mapcontent'
+// import Mapcontent from './components/Mapcontent'
 class Museummap {
 
     render () {
