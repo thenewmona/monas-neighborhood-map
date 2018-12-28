@@ -36,8 +36,11 @@ https://github.com/thenewmona/myNeighborhood-Maps.git
 
 [Mistakes i made as a ReactJS/React Native Developer.](https://medium.com/@imbudhiraja/mistakes-i-made-as-a-reactjs-react-native-developer-af2e8e07d4d?fbclid=IwAR3rljNUn4b6lBWPWeG0n0X1M8svO2xvBLUOZCz0nwYzywbGie6g_vEjts4)
 
-4. ## Not starting a component name with a capital letter
-This one is self explanatory. React components start only with a capital letter. So make habit of writing Components in capital.
+ ## Not starting a component name with a capital letter
+1.This one is self explanatory. React components start only with a capital letter. So make habit of writing Components in capital.
+
+## setState method is async
+2.State in React is async. It means that if we call setState, we don’t have a guarantee that, when the next line is executed, the change actually took place.
 
 
 
