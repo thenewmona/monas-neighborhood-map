@@ -250,3 +250,6 @@ working on scrimba's react course right now https://scrimba.com/p/p7P5Hd/cQ7natG
 
 Feeling really stupid right now, did not put the full path in for the import I am back to no errors now 
 going to bed now
+
+12/28/2018
+
