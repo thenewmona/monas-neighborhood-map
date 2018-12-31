@@ -27,4 +27,29 @@ ________________________________________________________________________________
 
 [Building A Sticky Sidebar In React (3/3)](https://www.youtube.com/watch?v=blFjpsV7pA4)
 
+<<<<<<< HEAD
 [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
+=======
+[Introduction to ES6 Promises – The Four Functions You Need To Avoid Callback Hell](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
+
+[Component-based state management for React](http://jamesknelson.com/component-based-state-management-react/)
+
+[Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
+
+[React.Component vs React.createClass](https://reactjsnews.com/composing-components)
+
+[React.createClass versus extends React.Component and Prototypal Function issue](https://teamtreehouse.com/community/reactcreateclass-versus-extends-reactcomponent-and-prototypal-function-issue)
+
+[State and this](https://frontarm.com/courses/learn-raw-react/state-and-events/state-and-this/)
+
+[Mistakes i made as a ReactJS/React Native Developer.](https://medium.com/@imbudhiraja/mistakes-i-made-as-a-reactjs-react-native-developer-af2e8e07d4d?fbclid=IwAR3rljNUn4b6lBWPWeG0n0X1M8svO2xvBLUOZCz0nwYzywbGie6g_vEjts4)
+
+ ## Not starting a component name with a capital letter
+1.This one is self explanatory. React components start only with a capital letter. So make habit of writing Components in capital.
+
+## setState method is async
+2.State in React is async. It means that if we call setState, we don’t have a guarantee that, when the next line is executed, the change actually took place.
+
+
+
+>>>>>>> 25975c62c97f3e771dbcb6aa647c2b35db8c3e3e
