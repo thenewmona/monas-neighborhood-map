@@ -4,7 +4,9 @@
 ___________________________
 The goal of this project was to build a single page map application using React & Google Maps API.
 
- I was also required to integrate a third-party data API, , and make the app accessible and usable offline.
+ I was also required to integrate a third-party data API.
+ I was also required to make app accessible to all users and usable offline.
+ I accomplished this by using ARIA,
 
 *My Project Overview*
 
