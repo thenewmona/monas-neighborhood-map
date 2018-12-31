@@ -1,9 +1,10 @@
 import React from 'react';
+// import ReactDOM from 'react-dom';
 import Museummap from './Component/Museummap'
 
 
 class Museumlist extends React.Component {
-    render() {
+    render() {//https://reactjs.org/docs/rendering-elements.html
         return 
 
     }

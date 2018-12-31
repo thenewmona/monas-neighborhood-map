@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import './App.css'
-import Mapcontent from './components/Mapcontent/Mapcontent'
+import ReactDOM from 'react-dom';
+import './App.css';
+import Mapcontent from './components/Mapcontent/Mapcontent';
+import Mapfooter from './components/Mapfooter/Mapfooter'
 
 
 

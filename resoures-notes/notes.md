@@ -253,3 +253,25 @@ going to bed now
 
 12/28/2018
 
+https://reactjs.org/docs/rendering-elements.html
+
+12/31/2018 
+
+Year is almost done, and I am not seeing and end in sight with this project 
+Trying to get through the frustration of this project 
+
+Still working on setting up my components 
+
+Every time I go 
+
+`class Content extends React.Comonent {
+  render() {
+    return <"/>;
+  }
+}`
+
+I keep getting an error message 
+
+I am also getting this error message in `Mapcontent.js`
+
+**Expected an assignment or function call and instead saw an expression.**

@@ -1,8 +1,13 @@
+# Resources used for this project
+__________________________________________________________________________________
+
+[mona's neighborhood map project](https://github.com/thenewmona/myNeighborhood-Maps.git)
+
 [Elharony walkthrough](https://www.youtube.com/watch?v=ywdxLNjhBYw&t=204s) 
 
-https://stackoverflow.com/questions/20870895/how-to-diagnose-and-fix-git-fatal-unable-to-read-tree?lq=1
+[Turbo 360 - React with Google Maps](https://www.youtube.com/watch?v=N1J7Q1qJPQM)
 
-https://github.com/thenewmona/myNeighborhood-Maps.git
+[GIT - Unable to read tree](https://stackoverflow.com/questions/20870895/how-to-diagnose-and-fix-git-fatal-unable-to-read-tree?lq=1)
 
 [React Bounds Element Queries in React](https://www.npmjs.com/package/react-bounds)
 
@@ -22,3 +27,4 @@ https://github.com/thenewmona/myNeighborhood-Maps.git
 
 [Building A Sticky Sidebar In React (3/3)](https://www.youtube.com/watch?v=blFjpsV7pA4)
 
+[Rendering Elements](https://reactjs.org/docs/rendering-elements.html)

@@ -1,10 +1,12 @@
 import React from 'react';
+// import ReactDOM from 'react-dom';
+// import { ReactComponent } from '*.svg';
 // import Mapcontent from './components/Mapcontent'
-class Museummap {
+class  Museummap extends React.Component{
 
     render () {
 
-return <div role = 'application' id = 'Museummap' className ='Museummap'/>
+return <div role = 'application' id = 'Museummap' className ='Museummap'/>;
     }
 }
 
