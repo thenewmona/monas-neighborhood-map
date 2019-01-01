@@ -1,8 +1,9 @@
+// https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
-import Mapcontent from './components/Mapcontent/Mapcontent';
-import Mapfooter from './components/Mapfooter/Mapfooter'
+// import Mapcontent from './components/Mapcontent/Mapcontent';
+// import Mapfooter from './components/Mapfooter/Mapfooter'
 
 
 

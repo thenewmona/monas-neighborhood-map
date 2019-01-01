@@ -13,10 +13,7 @@ The goal of this project was to build a single page map application using React 
 For the Neighborhood Map Project I built a single page application featuring a map of local museums in Grand Rapids, MI area.
 
  I added functionality to this map; including info windows, custom markers, a side bar list of the museums and search filtering of the museum list with associated markers filtered by a search. 
- 
- Location names and markers open an infowindow on click.  
- The infowindow provides additional location information. 
- 
+  
  Loaction information is provided by Foursquare API. Map is built with Google Maps API.
 
 

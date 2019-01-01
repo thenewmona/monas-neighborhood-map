@@ -275,3 +275,21 @@ I keep getting an error message
 I am also getting this error message in `Mapcontent.js`
 
 **Expected an assignment or function call and instead saw an expression.**
+
+alrighty, back at it again, going through this from FFC
+
+[How to write your first React.js component](https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc)
+
+totally not understanding this , tutorial after tutorial 
+something is not clicking 
+
+ [React Elements vs React Components ](https://tylermcginnis.com/react-elements-vs-react-components/)
+
+is an object representation of what you will see on the screen
+In order to create our object representation of a DOM node (aka React element), we can use React’s createElement method.
+
+## Component 
+
+A component is a function or a Class which optionally accepts input and returns a React element.
+
+All right calling it a night, going to do the REACT tutorial tomorrow, and word on that and come back to this 
