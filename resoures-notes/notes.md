@@ -275,3 +275,14 @@ I keep getting an error message
 I am also getting this error message in `Mapcontent.js`
 
 **Expected an assignment or function call and instead saw an expression.**
+
+1/8/2018
+
+Time to knock this thing out 
+worked on Brad Traversy's [React JS Crash Course - 2019](https://www.youtube.com/watch?v=sBws8MSXN7A&feature=push-u-sub&attr_tag=zVn0WchU7lSlcy1b%3A6)
+
+learned how to destruct, use `.map` and `bind` 
+
+[JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+
+[Simplify your JavaScript – Use .map(), .reduce(), and .filter()](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
