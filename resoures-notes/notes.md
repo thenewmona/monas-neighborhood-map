@@ -74,4 +74,17 @@ installed google-maps-react - reactDom and reactRouter
 recreating project - to many issues to troubleshoot 
 starting fresh again 
 new project name is monas-neighborhood-map
+
 following [Elharony walkthrough](https://www.youtube.com/watch?v=ywdxLNjhBYw&t=204s) 
+Finally got my app.js setup, and my map is rendering 
+
+[componentDidMount](https://reactjs.org/docs/react-component.html#componentdidmount)
+work on markers tomorrow 
+
+also need to work on these error messages 
+
+webpackHotDevClient.js:120 ./src/App.js
+
+  `Line 4:   'logo' is defined but never used          no-unused-vars`
+
+  `Line 21:  'map' is assigned a value but never used  no-unused-vars`

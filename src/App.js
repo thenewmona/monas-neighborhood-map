@@ -1,7 +1,7 @@
 // https: //developers.google.com/maps/documentation/javascript/tutorial
 // https: //www.youtube.com/watch?v=ywdxLNjhBYw&t=204s
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
