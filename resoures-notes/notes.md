@@ -293,3 +293,71 @@ In order to create our object representation of a DOM node (aka React element), 
 A component is a function or a Class which optionally accepts input and returns a React element.
 
 All right calling it a night, going to do the REACT tutorial tomorrow, and word on that and come back to this 
+
+1/2/2019
+
+Alright it is a new year, but not a new issue 
+just trying to get one simple thing to work, and it is not happening 
+trying to configure the footer so that I can see it , am not sure what it is that I am doing wrong 
+this is really getting frustrating 
+I understand the whole idea behind everything, but bringing it together and making it work is a totally different story
+
+
+## Error's for today 
+/src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/components/footer/Mapfooter.js
+  Line 13:  Anchors must have content and the content must be accessible by a screen reader  jsx-a11y/anchor-has-content
+printWarnings @ webpackHotDevClient.js:120
+webpackHotDevClient.js:120 ./src/App.js
+  Line 7:    'Mapfooter' is defined but never used         no-unused-vars
+  Line 73:  Expected to return a value in arrow function  array-callback-return
+printWarnings @ webpackHotDevClient.js:120
+

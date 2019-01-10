@@ -1,13 +1,17 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
-import Museummap from './Component/Museummap'
+// import Museummap from './Component/Museummap'
 
 
 class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
         return 
+//locations 
 
-    }
+
+
+
+    };
 }
 
 export default Museumlist;

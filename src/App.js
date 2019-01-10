@@ -2,12 +2,10 @@
 import React, { Component } from 'react'
 // import ReactDOM from 'react-dom';
 import './App.css';
-// import Mapcontent from './components/Mapcontent/Mapcontent';
-// import Mapfooter from './components/Mapfooter/Mapfooter'
-
-
-
-import axios from 'axios'
+// import Museumlist from './components/Museumlist/Museumlist'
+// import Mapcontent from './components/Mapcontent/Mapcontent'
+import Mapfooter from './components/footer/Mapfooter'
+import axios from 'axios'//needed for foursquares API 
 
 class App extends Component {
 
@@ -44,7 +42,7 @@ class App extends Component {
         }, this.renderMap())
       })
       .catch(error => {
-        alert(`Sorry, for the incovience`)
+        alert(`Sorry, for the inconvience`)
         console.log("apologize for the inconvience the following error has occured " + error)
       })
 

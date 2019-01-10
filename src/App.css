@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -41,4 +41,26 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+/* from kenjournal-https://www.youtube.com/watch?v=1fUbZTHcZUs&t=930s */
+App {
+  text-align: center;
+  background-color: blue;
+}
+
+#map {
+  min-height: 100vh;
+}
+
+#List {
+  width:25%;
+  height: 100%;
+  background-color: blue;
+  z-index: 1;
+  position: bottom;
+}
+
+Mapfooter {
+  
 }
