@@ -286,3 +286,13 @@ learned how to destruct, use `.map` and `bind`
 [JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 
 [Simplify your JavaScript – Use .map(), .reduce(), and .filter()](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
+
+1/9/2018 
+
+worked with Julian on Brad's react app and went over the map project 
+going to connect with him on friday to work on the map some more
+
+1/11/2018 
+
+got the footer to work with Julian's help , need to do some CSS styling and thinking of moving the footer CSS over to the app.css 
+instead of inlining it the way I have it 
