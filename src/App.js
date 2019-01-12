@@ -2,10 +2,19 @@
 import React, { Component } from 'react'
 // import ReactDOM from 'react-dom';
 import './App.css';
+<<<<<<< HEAD
 // import Museumlist from './components/Museumlist/Museumlist'
 // import Mapcontent from './components/Mapcontent/Mapcontent'
 import Mapfooter from './components/footer/Mapfooter'
 import axios from 'axios'//needed for foursquares API 
+=======
+// import Mapcontent from './components/Mapcontent/Mapcontent';
+// import Mapfooter from './components/Mapfooter/Mapfooter'
+
+
+
+import axios from 'axios'
+>>>>>>> f26ffc91f9a2362669d01cceab60ce21edd2c16d
 
 class App extends Component {
 
