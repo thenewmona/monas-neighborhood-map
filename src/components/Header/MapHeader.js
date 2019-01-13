@@ -1,18 +1,16 @@
 
 import React, { Component } from 'react';
-import '../App.css';
+// import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-class Header extends Component {
+class MapHeader extends Component {
 
 	render() {
 		return (
 			<nav className="header">
 				<button onClick={this.props.updateSideBar} aria-label="menu">
-					<FontAwesomeIcon
-						icon="bars"
-					/>			
+					<FontAwesomeIcon icon="bars"/>			
 				</button>
 				<h1>Grand Rapids Museums</h1>
 			</nav>
@@ -20,4 +18,4 @@ class Header extends Component {
 	}
 }
 
-export default Header
+export default MapHeader;

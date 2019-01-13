@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 // import ReactDOM from 'react-dom';
 import './App.css';
 // import Mapcontent from './components/Mapcontent/Mapcontent';
+import MapHeader from './components/Header/MapHeader'
 import Mapfooter from './components/footer/Mapfooter'
-
-
+ 
 
 import axios from 'axios'
 
@@ -112,7 +112,9 @@ class App extends Component {
       <main>
          
        <div clasname = 'museumMap' id="map"></div>
-       < Mapfooter />   
+       < MapHeader />
+       < Mapfooter />
+          
       </main>
     )
   }

@@ -296,3 +296,26 @@ going to connect with him on friday to work on the map some more
 
 got the footer to work with Julian's help , need to do some CSS styling and thinking of moving the footer CSS over to the app.css 
 instead of inlining it the way I have it 
+
+1/12/2019
+Finished Brad's tutorial 
+Wanting to do my header like he did it in the tutorial 
+
+need to get better at the Render Props 
+[Render Props](https://reactjs.org/docs/render-props.html)
+
+1/13/2018 
+Got my footer working now trying to get my header working 
+Need to cut out some of the components, this is just confusing me to much 
+
+Installed fontawesome React, needing to use it later for the markers, hopefully if I can get it to work
+
+[FontAwesome React](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+[landmark icon](https://fontawesome.com/icons/landmark?style=solid)
+
+## getting this error message 
+
+You should not use <Link> outside a <Router>
+https://github.com/ReactTraining/react-router/issues/6140
+
+https://github.com/ReactTraining/react-router/issues/3889
