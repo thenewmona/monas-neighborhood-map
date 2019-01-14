@@ -10,7 +10,7 @@ class MapBar extends Component {
 	render(){
 		return(
 			<div className='header'>
-				<h2 className='GRmuseums'>Grand Rapids Museums</h2>	
+				<h2 className='GRmuseums'>Museums</h2>	
 			<div className='menu'
 				onClick={this.showHide}
 				tabIndex='1'

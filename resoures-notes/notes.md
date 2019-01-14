@@ -319,3 +319,11 @@ You should not use <Link> outside a <Router>
 https://github.com/ReactTraining/react-router/issues/6140
 
 https://github.com/ReactTraining/react-router/issues/3889
+
+Trying to figure out what is going on with my header, tried to do some CSS, but when I go to import app.css, get this error message 
+
+./src/components/Header/MapHeader.js
+Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map\src\components\Header'
+[React Lifecycle Methods – A Deep Dive](https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript
+https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript)
+

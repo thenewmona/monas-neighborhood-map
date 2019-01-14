@@ -63,4 +63,9 @@ App {
 
 .Mapfooter {
   height:30px;
+  background-color: blue;
+}
+.MapHeader {
+background-color: brown;
+color: aqua;
 }

@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import './App.css';
 import MapHeader from './components/Header/MapHeader'
-
 import Mapfooter from './components/footer/Mapfooter'
 import MapBar from './components/MapBar/MapBar'
 // import ReactDOM from 'react-dom';
