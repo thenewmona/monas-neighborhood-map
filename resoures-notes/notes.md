@@ -327,3 +327,6 @@ Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map
 [React Lifecycle Methods – A Deep Dive](https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript
 https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript)
 
+got header at the top, got my hamburger to start my SideBar, or MapBar as I am calling the component 
+Still having issue with the CSS file, but I may just do inline CSS and call it a day 
+
