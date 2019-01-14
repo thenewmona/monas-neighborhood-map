@@ -1,10 +1,11 @@
 // https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc
 import React, { Component } from 'react'
-// import ReactDOM from 'react-dom';
 import './App.css';
-// import Mapcontent from './components/Mapcontent/Mapcontent';
 import MapHeader from './components/Header/MapHeader'
+
 import Mapfooter from './components/footer/Mapfooter'
+import MapBar from './components/MapBar/MapBar'
+// import ReactDOM from 'react-dom';
  
 
 import axios from 'axios'
@@ -114,7 +115,7 @@ class App extends Component {
        <div clasname = 'museumMap' id="map"></div>
        < MapHeader />
        < Mapfooter />
-          
+         < MapBar /> 
       </main>
     )
   }

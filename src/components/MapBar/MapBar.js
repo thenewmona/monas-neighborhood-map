@@ -1,16 +1,23 @@
-import React from 'react';
-// class MapBar extends Component {
+import React, { Component } from 'react';
 
-// 	render() {
-// 		return (
-// 			<nav className="MapBar">
-// 				<button onClick={this.props.updateMapBar} aria-label="menu">
-// 					<FontAwesomeIcon icon="landmark"/>			
-// 				</button>
-// 				<h1>Grand Rapids Museums</h1>
-// 			</nav>
-// 		)
-// 	}
-// }
 
-// export default MapBar;
+class MapBar extends Component {	
+	showHide=()=>{
+			const mapBar = document.getElementById('mapBar');
+			mapBar.classList.toggle('hide');
+	}
+
+	render(){
+		return(
+			<div className='header'>
+				<h2 className='GRmuseums'>Grand Rapids Museums</h2>	
+			<div className='menu'
+				onClick={this.showHide}
+				tabIndex='1'
+				onKeyPress={this.showHide}>☰</div>
+			</div>
+		)
+	}
+}
+
+export default MapBar;
