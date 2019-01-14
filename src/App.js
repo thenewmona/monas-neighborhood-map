@@ -110,11 +110,17 @@ class App extends Component {
 
      
       <main>
-         
-       <div clasname = 'museumMap' id="map"></div>
+          <div className='sideBar'>
        < MapHeader />
+       < MapBar /> 
+       </div>
+
+       <div clasname = 'museumMap' id="map">
+       
+       </div>       
        < Mapfooter />
-         < MapBar /> 
+      
+         
       </main>
     )
   }
