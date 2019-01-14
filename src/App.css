@@ -65,7 +65,10 @@ App {
   height:30px;
   background-color: blue;
 }
-.MapHeader {
+#Header {
 background-color: brown;
 color: aqua;
+}
+.h3 {
+  text-align: center;
 }
