@@ -330,3 +330,6 @@ https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112
 got header at the top, got my hamburger to start my SideBar, or MapBar as I am calling the component 
 Still having issue with the CSS file, but I may just do inline CSS and call it a day 
 
+1/14/2019
+
+[VIDEOS on infowindows and markers]( https://www.youtube.com/playlist?list=PLZsyx8KUD6eJ85cckEPTe_Gu6Dk7TwAdu)
