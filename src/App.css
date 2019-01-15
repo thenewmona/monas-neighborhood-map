@@ -32,9 +32,9 @@ App {
 }
 
 #List {
-  width:25%;
+  width:20%;
   height: 100%;
-  background-color: rgb(58, 58, 153);
+  background-color: rgb(134, 168, 182);
   z-index: 1;
   position: absolute;
 }
