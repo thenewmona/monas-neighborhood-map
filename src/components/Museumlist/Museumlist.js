@@ -6,7 +6,7 @@ import React from 'react';
 class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
         return 
-//locations 
+//locationlist  
 
 
 
