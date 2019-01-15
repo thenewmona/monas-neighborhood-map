@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import './App.css';
 import MapHeader from './components/Header/MapHeader'
 import Mapfooter from './components/footer/Mapfooter'
-import MapBar from './components/MapBar/MapBar'
+// import MapBar from './components/MapBar/MapBar'
+import MuseumList from './components/Museumlist/Museumlist'
 // import ReactDOM from 'react-dom';
  
 
@@ -112,7 +113,8 @@ class App extends Component {
       <main>
           <div className='sideBar'>
        < MapHeader />
-       < MapBar /> 
+       {/* < MapBar />  */}
+       <MuseumList/>
        </div>
 
        <div clasname = 'museumMap' id="map">

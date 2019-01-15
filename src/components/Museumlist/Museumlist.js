@@ -1,11 +1,17 @@
 import React from 'react';
+
 // import ReactDOM from 'react-dom';
 // import Museummap from './Component/Museummap'
 
 
 class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
-        return 
+        return (
+<div id='List'>
+            <h2>Museum List</h2>
+        </div>
+        )
+        
 //locationlist  
 
 
@@ -13,6 +19,7 @@ class Museumlist extends React.Component {
 
     };
 }
+
 
 export default Museumlist;
 
