@@ -333,3 +333,8 @@ Still having issue with the CSS file, but I may just do inline CSS and call it a
 1/14/2019
 
 [VIDEOS on infowindows and markers]( https://www.youtube.com/playlist?list=PLZsyx8KUD6eJ85cckEPTe_Gu6Dk7TwAdu)
+
+1/16/2019
+
+[Udacity bounds and infoWindow](https://classroom.udacity.com/nanodegrees/nd001/parts/f4471fff-fffb-4281-8c09-2478625c9597/modules/a2527452-bb9f-431c-bfa7-a20b17992650/lessons/8304370457/concepts/83122494450923)
+
