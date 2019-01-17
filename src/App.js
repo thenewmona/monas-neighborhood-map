@@ -39,6 +39,8 @@ class App extends Component {
       v:"201849548"
     }
 
+    //getting information via axios instead of using fetch 
+
     axios.get(endPoint + new URLSearchParams(parameters))
     .then(response => {
       let venues = response.data.response.groups[0].items.map(item => item.venue)
@@ -46,14 +48,14 @@ class App extends Component {
         venues,
          filteredVenueIds : venues.map (item => item.id)//get id from array in state
       }, this.renderMap())
-     })
+     })//not sure if this is what they mean by error handling per the Rubric 
       .catch(error => {
         alert(`Sorry, for the inconvience`)
         console.log("apologize for the inconvience the following error has occured " + error)
       })
-
   }
 
+  //filter the museums 
   filterMuseums = (query) => {
     let filteredVenueIds;
     if (!query) {
@@ -66,15 +68,32 @@ class App extends Component {
       this.setState({filteredVenueIds}, this.drawMarkers);
    }
 
+   //initilizaing the map centered on my house 
   initMap = () => {
-
     // Create A Map
    const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.96, lng: -85.7053 },//my home wyoming, mi
-      zoom: 8
-      // url:"https://image.flaticon.com/icons/svg/1243/1243565.svg"
-    })
+      zoom: 8,
+       url:"https://image.flaticon.com/icons/svg/1243/1243565.svg", //need to fix image size 
+      scaledSize: new window.google.maps.Size(60, 60),
+      origin: new window.google.maps.Point(0, 0), 
+      anchor: new window.google.maps.Point(20,40),
+    });
 
+this.dropMarker();
+  }
+  dropMarker = () => {
+    let museum = this.getFilteredMuseums();//not sure if this should be filtered Museums or filtered venues from the dom
+    let allMarkers = this.state.markers || [];
+    let show = [];
+
+allMarkers.forEach((marker)=> {
+if(venue.includes(marker.venue)){
+  show.push(marker);
+  return;
+}
+    })
+  }
     // Create An InfoWindow
     let infowindow = new window.google.maps.InfoWindow()
 
@@ -85,17 +104,20 @@ class App extends Component {
 //create markers
 
 createMarker = (grMuseuem) => {
-  //sets custom marker icon
-  var markerIcon = {
+  //sets custom marker icon , might download svg and just link this , 
+  let markerIcon = {
   url: 'https://image.flaticon.com/icons/svg/23/23715.svg',
-  scaledSize: new window.google.maps.Size(60, 60),
-  origin: new window.google.maps.Point(0, 0), // used if icon is a part of sprite, indicates image position in sprite
-  anchor: new window.google.maps.Point(20,40) // lets offset the marker image
+  scaledSize: new window.google.maps.Size(50, 50),
+  origin: new window.google.maps.Point(0, 0), 
+  anchor: new window.google.maps.Point(20,40) 
   };
 
     // Display Dynamic Markers
-    // this.state.museums.map(grMuseums => {
-       let contentString = `${grMuseums.venue.name + `<br>` + grMuseums.location.address + `<br>` `<i>info from FourSquare`}`
+    // this.state.museums.map(grMuseums => 
+
+       let contentString = `${grMuseums.venue.name + `<br>` + 
+                              grMuseums.location.address + `<br>` + 
+                              `<i>info from FourSquare`}`
       // Change the content
       infowindow.setContent(contentString)
 
@@ -115,11 +137,9 @@ createMarker = (grMuseuem) => {
       // bounds.extend(markLoc)
 
       // marker eventlistener
-      marker.addListener('click', function() {
+      marker.addListener('click', function() {        
 
-        
-
-        // Open An InfoWindow
+        // Open An InfoWindow - http://itpscan.ca/examples/google_maps/maps_02/
         infowindow.open(map, marker)
       })
 
@@ -128,10 +148,7 @@ createMarker = (grMuseuem) => {
 		//  map.setZoom(map.getZoom()-1); 
 		//  return marker;
     
-    })
-
-    
-
+    })   
   }
 
   render() {

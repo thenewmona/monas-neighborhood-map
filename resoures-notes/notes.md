@@ -363,3 +363,34 @@ MatHeader are not in the same directory as App.css, but are two levels down (edi
 thenewmona {FEND}Michigan   [3 minutes ago]
 ok thanks
 
+[activeInfoWindow](http://itpscan.ca/examples/google_maps/maps_02/)
+Trying to fix the markers, and get the information for the sidebar, of course I have broke the project again 
+
+Failed to compile
+./src/App.js
+  Line 129:  Parsing error: Unexpected token, expected ";"
+
+  127 | 		//  return marker;
+  128 |     
+> 129 |     })
+      |      ^
+  130 | 
+  131 |     
+  132 | 
+
+  so I will need to fix this tomorrow, and hopefully be able to populate the sidebar information and submit on friday 
+
+  more errors 
+
+./src/App.js
+  Line 98:  Parsing error: Unexpected token
+
+   96 |   }
+   97 |     // Create An InfoWindow
+>  98 |     let infowindow = new window.google.maps.InfoWindow()
+      |         ^
+   99 | 
+  100 |     //marker boundaries
+  101 |     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
+
+
