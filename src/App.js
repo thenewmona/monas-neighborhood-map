@@ -35,6 +35,7 @@ class App extends Component {
       client_secret: "RE4NWN115A1JETCAKMHQTZZ4VOLCMTK2LZNZUPN5K1PEEKOX",
       query: "museums",
       near:"Grand Rapids",
+      location:"",
       v:"201849548"
     }
 

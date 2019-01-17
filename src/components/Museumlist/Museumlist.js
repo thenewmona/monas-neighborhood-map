@@ -1,27 +1,27 @@
-import React from 'react';
+// import React from 'react';
 
 // import ReactDOM from 'react-dom';
 // import Museummap from './Component/Museummap'
 
 
-class Museumlist extends React.Component {
-    render() {//https://reactjs.org/docs/rendering-elements.html
-        return (
-<div id='List'>
-            <h2>Museum List</h2>
-        </div>
-        )
+// class Museumlist extends React.Component {
+//     render() {//https://reactjs.org/docs/rendering-elements.html
+//         return (
+// <div id='List'>
+//             <h2>Museum List</h2>
+//         </div>
+//         )
         
-//locationlist  
+// //locationlist  
 
 
 
 
-    };
-}
+//     };
+// }
 
 
-export default Museumlist;
+// export default Museumlist;
 
 // const toolbar = props =>  (
 //     <header>
@@ -45,3 +45,19 @@ export default Museumlist;
 //     </header>
 // );  
 
+import React from 'react';
+import '../App.css';
+
+
+class Museumlist extends React.Component {
+
+	render() {
+		return (
+                <li aria-label={this.props.museum.title + this.props.museum.formattedAddress} 
+                tabIndex="0" className="list-item" onClick={() => this.props.onListClick
+                    (this.props.museum)}>{this.props.museum.title}</li>		
+		)
+	}
+}
+
+export default Museumlist;
