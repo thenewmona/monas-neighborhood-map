@@ -45,11 +45,11 @@
 //     </header>
 // );  
 
-import React from 'react';
-import '../App.css';
+import React, { Component } from 'react';
+// import './App.css';
 
 
-class Museumlist extends React.Component {
+class Museumlist extends Component {
 
 	render() {
 		return (

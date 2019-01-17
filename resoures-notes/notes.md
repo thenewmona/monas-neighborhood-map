@@ -341,3 +341,6 @@ Still having issue with the CSS file, but I may just do inline CSS and call it a
 having issues with the app.css, keep getting this error message 
 `./src/components/Museumlist/Museumlist.js
 Module not found: Can't resolve '../App.css' in 'C:\source\monas-neighborhood-map\src\components\Museumlist'`
+
+`./src/components/footer/Mapfooter.js
+Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map\src\components\footer'`
