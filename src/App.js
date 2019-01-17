@@ -95,8 +95,9 @@ createMarker = (grMuseuem) => {
 
     // Display Dynamic Markers
     // this.state.museums.map(grMuseums => {
-    //   var contentString = `${grMuseums.venue.name}`
-      
+       let contentString = `${grMuseums.venue.name + `<br>` + grMuseums.location.address + `<br>` `<i>info from FourSquare`}`
+      // Change the content
+      infowindow.setContent(contentString)
 
       // Create A Marker
       const marker = new window.google.maps.Marker({        
@@ -116,18 +117,18 @@ createMarker = (grMuseuem) => {
       // marker eventlistener
       marker.addListener('click', function() {
 
-        // Change the content
-        infowindow.setContent(contentString)
+        
 
         // Open An InfoWindow
         infowindow.open(map, marker)
       })
+
     //   map.fitBounds(bounds);
 		//  map.panTo(bounds.getCenter());
 		//  map.setZoom(map.getZoom()-1); 
 		//  return marker;
-
-    });
+    
+    })
 
     
 
