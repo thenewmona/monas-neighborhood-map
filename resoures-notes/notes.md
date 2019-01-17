@@ -344,3 +344,22 @@ Module not found: Can't resolve '../App.css' in 'C:\source\monas-neighborhood-ma
 
 `./src/components/footer/Mapfooter.js
 Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map\src\components\footer'`
+
+## SlackChat
+
+americanman[FEND]   [Today at 8:55 PM]
+@thenewmona {FEND}Michigan
+inside of MatHeader uncomment it and use
+```import './../../App.css';```
+is going to work
+3 replies
+
+thenewmona {FEND}Michigan   [11 minutes ago]
+thanks, @americanman[FEND] that worked, but why do I have to put so many `./`
+
+americanman[FEND]   [7 minutes ago]
+MatHeader are not in the same directory as App.css, but are two levels down (edited)
+
+thenewmona {FEND}Michigan   [3 minutes ago]
+ok thanks
+
