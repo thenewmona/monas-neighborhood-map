@@ -398,7 +398,7 @@ Failed to compile
 
 Back at it again, can not figure out what it is that I am missing 
 To many comments and deletions 
-not understanding why it does not like the `{` on line 156 why it wants `;`
+not understanding why it does not like the `{` after the render on line 156 why it wants `;`
 
 Failed to compile
 ./src/App.js
