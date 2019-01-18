@@ -173,7 +173,7 @@ createMarker = (grMuseuem) => {
       </main>
     )
   }
-}
+
 
 function scriptLoader(url) {
   let index  = window.document.getElementsByTagName("script")[0]
