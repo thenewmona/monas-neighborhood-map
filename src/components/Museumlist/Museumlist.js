@@ -1,14 +1,13 @@
 import React from 'react';
-
 // import ReactDOM from 'react-dom';
-// import Museummap from './Component/Museummap'
 import './../../App.css';
-
+// import MapBar from './components/MapBar/MapBar';
 class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
         return (
 <div id='List'>
             <h2>Museum List</h2>
+            {/* <MapBar /> */}
         </div>
         )
         
