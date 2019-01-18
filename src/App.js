@@ -95,7 +95,7 @@ if(venue.includes(marker.venue)){
     })
   }
     // Create An InfoWindow
-    let infowindow = new window.google.maps.InfoWindow()
+    // let infowindow = new window.google.maps.InfoWindow()
 
     //marker boundaries
     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
@@ -130,7 +130,7 @@ createMarker = (grMuseuem) => {
         id: grMuseuem.id,        
         animation: window.google.maps.Animation.DROP,
         icon: markerIcon
-      })
+      });
 
       //extending the marker bounds 
       // let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
@@ -148,8 +148,10 @@ createMarker = (grMuseuem) => {
 		//  map.setZoom(map.getZoom()-1); 
 		//  return marker;
     
-    })   
-  }
+    ;
+    }
+   }
+  
 
   render() {
     return (

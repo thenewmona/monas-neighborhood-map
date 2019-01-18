@@ -394,4 +394,21 @@ Failed to compile
   101 |     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
 
 
-https://github.com/bailey-mae/neighborhood-map-app
+1/17/2018
+
+Back at it again, can not figure out what it is that I am missing 
+To many comments and deletions 
+not understanding why it does not like the `{` on line 156 why it wants `;`
+
+Failed to compile
+./src/App.js
+  Line 156:  Parsing error: Unexpected token, expected ";"
+
+  154 |   
+  155 | 
+> 156 |   render() {
+      |            ^
+  157 |     return (
+  158 | 
+  159 |      
+This error occurred during the build time and cannot be dismissed.
