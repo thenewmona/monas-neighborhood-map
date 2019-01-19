@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import MuseumList from './components/MuseumList/MuseumList';
 
-class MapContent extends React.component {
+export default class MapContent extends React.component {
     render () {
         return (
             <div className='MapContent'>
@@ -14,4 +14,4 @@ class MapContent extends React.component {
     }
 }
 
-export default MapContent;
+// export default MapContent;

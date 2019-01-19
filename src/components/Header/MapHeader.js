@@ -6,7 +6,7 @@ import './../../App.css';
 
 
 
-class MapHeader extends Component {
+export default class MapHeader extends Component {
 
 	render() {
 		return (
@@ -20,4 +20,4 @@ class MapHeader extends Component {
 	}
 }
 
-export default MapHeader;
+// export default MapHeader;

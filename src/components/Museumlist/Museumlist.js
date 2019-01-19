@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import './../../App.css';
 // import MapBar from './components/MapBar/MapBar';
-class Museumlist extends React.Component {
+export default class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
         return (
 <div id='List'>
@@ -20,7 +20,7 @@ class Museumlist extends React.Component {
 }
 
 
-export default Museumlist;
+// export default Museumlist;
 
 // const toolbar = props =>  (
 //     <header>

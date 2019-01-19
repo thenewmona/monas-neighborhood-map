@@ -25,17 +25,22 @@ body {
 App {
   text-align: center;
   background-color: blue;
+  color:rgb(1, 104, 200);
 }
 
 #map {
+  width: 100%;
   min-height: 100vh;
+  position: relative;
 }
-
+/* sidebar */
 #List {
-  width:20%;
+  width:100px;
+  max-width: 100%;
   height: 100%;
-  background-color: rgb(134, 168, 182);
-  z-index: 1;
+  max-height: 100vh;
+  background-color: rgb(6, 106, 149);
+  z-index: 100;
   position: absolute;
 }
 
@@ -44,9 +49,6 @@ App {
   background-color: blue;
 }
 #Header {
-background-color: brown;
+background-color: rgb(238, 24, 24);
 color: aqua;
-}
-.h3 {
-  text-align: center;
 }

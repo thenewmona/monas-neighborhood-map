@@ -418,3 +418,7 @@ Got my map back to almost where it was before,
 ## anchor-has-content
 Enforce that anchors have content and that the content is accessible to screen readers. Accessible means that it is not hidden using the aria-hidden prop. Refer to the references to learn about why this is important.
 [Anchor](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md)
+
+1/19/2018
+
+Gonna get this project to a point that I can submit today and see what the reviewers say 

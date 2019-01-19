@@ -1,6 +1,6 @@
 import React from 'react'
 
- function About() {
+export default function About() {
   return (
 
     <React.Fragment>
@@ -9,4 +9,4 @@ import React from 'react'
     </React.Fragment>
   )
 }
-export default About;
+// export default About;
