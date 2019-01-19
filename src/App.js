@@ -1,13 +1,13 @@
 // https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc
 import React, { Component } from 'react'
 import './App.css';
-import MapHeader from './components/Header/MapHeader'
-// import MapBar from './components/MapBar/MapBar'
-import Mapfooter from './components/footer/Mapfooter'
+import MapHeader from './components/MapHeader'
+import MapBar from './components/MapBar'
+import Mapfooter from './components/Mapfooter'
 // import ReactDOM from 'react-dom';
  
 import axios from 'axios'
-import Museumlist from './components/Museumlist/Museumlist';
+import Museumlist from './components/Museumlist';
 
 class App extends Component {
   state = {//per drunkenkismister 12/18/2018
@@ -91,7 +91,7 @@ class App extends Component {
      
           <div className='sideBar'>
        < MapHeader />
-       {/* < MapBar />  */}
+       < MapBar /> 
        < Museumlist/>
        </div>
       

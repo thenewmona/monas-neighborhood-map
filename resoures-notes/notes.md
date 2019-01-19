@@ -421,4 +421,7 @@ Enforce that anchors have content and that the content is accessible to screen r
 
 1/19/2018
 
-Gonna get this project to a point that I can submit today and see what the reviewers say 
+Gonna get this project to a point that I can submit today and see what the reviewers say
+cleaning up my project, got rid of all the folders they were just confusing me, just put all the components back in component folder instead. 
+
+
