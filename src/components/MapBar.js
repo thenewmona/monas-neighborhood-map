@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import listMuseums from './listMuseums';
-import Museumlist from './Museumlist';
+// import Museumlist from './Museumlist';
 
 
 export default class MapBar extends Component {	
@@ -12,16 +12,19 @@ export default class MapBar extends Component {
 render() {
 	return (
 		<div className='searchBox'>
-		<input type={'search'} id={'search'} placeholder={'Filter Museums'}/>
-		<listMuseums />
+		<input type={'search'} id={'search'} 
+		aria-label='Filter location by name' tabIndex='0'
+	    onChange={this.handleSearch} placeholder={'Filter Museums'}/>
+		{/* <listMuseums /> */}
 		</div>
 	);
 }
-}
+};
+
 // Hamburger button
 // 	render(){
 // 		return(
-// 			<div className='header'>
+// 			<div className='hmButton'>
 // 				<h2 className='GRmuseums'>Museums</h2>	
 // 			<div className='menu'
 // 				onClick={this.showHide}
@@ -30,6 +33,6 @@ render() {
 // 			</div>
 // 		)
 // 	}
-// }
+// };
 
 

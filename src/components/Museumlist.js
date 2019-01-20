@@ -1,32 +1,28 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import './../App.css';
-import listMuseums from './listMuseums';
+
 // import MapBar from './components/MapBar/MapBar';
 export default class Museumlist extends React.Component {
     render() {//https://reactjs.org/docs/rendering-elements.html
         return (
-<div id='List'>
+<div className='side-bar'>
+<h2>Museum List</h2>
 <ol className='listMuseums'>
-</ol>
-<listMuseums />
-            <h2>Museum List</h2>
-            {/* <MapBar /> */}
-        </div>
-        )
-        
-//locationlist  
-
-
-
-
-    };
+{this.props && this.props.museums.map((museum) =>
+<li> {museum.venue.name} </li>
+)}
+</ol >
+</div>
+        )};
 }
+        
+            
+     
 
 
-// export default Museumlist;
 
-// const toolbar = props =>  (
+{/* // const toolbar = props =>  (
 //     <header>
 //  <nav>
 //      <div></div>
@@ -47,4 +43,4 @@ export default class Museumlist extends React.Component {
 //  </nav>
 //     </header>
 // );  
-
+ */}

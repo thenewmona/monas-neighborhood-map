@@ -84,17 +84,14 @@ class App extends Component {
   }
   render() {
     return (
-
-
-      <main>
-
+      <main class=".app">
+< MapHeader />  
      
           <div className='sideBar'>
-       < MapHeader />        
-       < Museumlist/>
-       < MapBar />
-       </div>
-      
+          <Museumlist{...this.state}/>
+          </div>     
+       {/* < Museumlist/> */}
+                  
 
        <div clasname = 'museumMap' id="map">
        

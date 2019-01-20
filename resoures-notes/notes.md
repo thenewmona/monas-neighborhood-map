@@ -424,4 +424,12 @@ Enforce that anchors have content and that the content is accessible to screen r
 Gonna get this project to a point that I can submit today and see what the reviewers say
 cleaning up my project, got rid of all the folders they were just confusing me, just put all the components back in component folder instead. 
 
+1/20/2019
 
+Got some help from Robert, working through the suggestions that he gave me 
+
+https://snag.gy/N6n7qv.jpg?fbclid=IwAR02XgCEawBpQDaBS_R29egrqeww6n3VKAvAGvLT_g88k395TtscSJIkdUU
+
+https://snag.gy/GqkRZK.jpg?fbclid=IwAR2TM07lgZsQWWMeQ6-2Am7OmOxvNn6w8CDTh4qoyS-n-B_jXxz3VSRPKcs
+
+https://snag.gy/PLGVTk.jpg?fbclid=IwAR1DmLVBz_r-ewz1ZBIpXPkAkuMgRyLeNBFeQy8huidGqTyLDWXZ_wGE78s
