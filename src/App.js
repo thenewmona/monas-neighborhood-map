@@ -12,8 +12,13 @@ import Museumlist from './components/Museumlist';
 class App extends Component {
   state = {//per drunkenkismister 12/18/2018
   museums:[],
-  map:null,
-  infoWindow:null,
+
+  // doug browns walkthrough
+  // map:null,
+  // infoWindow:null,
+  // markers: [],
+  // activeMarker: null,
+  // showingInfoWindow: false
   }
   componentDidMount() {
     this.getMuseums();//calls the foursquare API
@@ -51,6 +56,7 @@ class App extends Component {
     })
     // Create An InfoWindow
     let infowindow = new window.google.maps.InfoWindow()
+    window.infoWindow=infowindow;
     //marker boundaries
     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
     // let bounds = new window.google.maps.LatLngBounds();
@@ -74,7 +80,12 @@ class App extends Component {
         infowindow.setContent(contentString)
         // Open An InfoWindow
         infowindow.open(map, marker)
+        // bouncy marker 
+        marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        setTimeout(() => marker.setAnimation(null), 2100);
       })
+
+      //need to close infoWindow ?
     //   map.fitBounds(bounds);
 		//  map.panTo(bounds.getCenter());
 		//  map.setZoom(map.getZoom()-1); 
@@ -88,10 +99,11 @@ class App extends Component {
 < MapHeader />  
      
           <div className='sideBar'>
+          <MapBar /> 
           <Museumlist{...this.state}/>
           </div>     
        {/* < Museumlist/> */}
-                  
+          
 
        <div clasname = 'museumMap' id="map">
        
