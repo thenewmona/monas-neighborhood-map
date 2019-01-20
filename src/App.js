@@ -90,9 +90,9 @@ class App extends Component {
 
      
           <div className='sideBar'>
-       < MapHeader />
-       < MapBar /> 
+       < MapHeader />        
        < Museumlist/>
+       < MapBar />
        </div>
       
 
