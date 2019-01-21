@@ -18,13 +18,13 @@ export default class MapBar extends Component {
 				tabIndex='1'
 				onKeyPress={this.showHide}>☰</div>
 
-				<div className='searchBox'>
+				 <div className='searchBox'>
 		<input type={'search'} id={'search'} 
 	aria-label='Filter location by name' tabIndex='0' 	    
-	onChange={this.handleSearch} placeholder={'Filter Museums'}/>
-		
+	onChange={this.handleSearch} placeholder={'Filter Museums'}/> 
+		</div>
 			</div>
-			</div>
+			
 		)
 	}
 }		

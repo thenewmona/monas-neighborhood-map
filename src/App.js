@@ -75,6 +75,7 @@ class App extends Component {
       // let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
       // bounds.extend(markLoc)
       // marker eventlistener
+      
       marker.addListener('click', function() {
         // Change the content
         infowindow.setContent(contentString)

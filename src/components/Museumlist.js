@@ -8,12 +8,21 @@ export default class Museumlist extends React.Component {
         return (
 <div className='side-bar'>
 <h2>Museum List</h2>
+
 <ol className='listMuseums'>
+<a href="https://www.foursquare.com" target="blank"></a>
+
 {this.props && this.props.museums.map((museum) =>
-<li> {museum.venue.name} </li>
+    <li id={`museums-${museum.venue.id}`} tabIndex="0"
+     role="Menuitem" aria-labelledby={`venue-${museum.venue.id}-name Sidebar-heading`} 
+    key={museum.venue.id} onClick={() => this.props.onVenueClick(museum.venue.id)} 
+    className={this.props.selectedVenueId === museum.venue.id ? 'selected' : ''}>
+    <label id={`museums-${museum.venue.id}-name`}>{museum.venue.name}</label> 
+</li>
 )}
 </ol >
 </div>
+
         )};
 }
         

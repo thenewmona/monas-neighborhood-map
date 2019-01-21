@@ -433,3 +433,21 @@ https://snag.gy/N6n7qv.jpg?fbclid=IwAR02XgCEawBpQDaBS_R29egrqeww6n3VKAvAGvLT_g88
 https://snag.gy/GqkRZK.jpg?fbclid=IwAR2TM07lgZsQWWMeQ6-2Am7OmOxvNn6w8CDTh4qoyS-n-B_jXxz3VSRPKcs
 
 https://snag.gy/PLGVTk.jpg?fbclid=IwAR1DmLVBz_r-ewz1ZBIpXPkAkuMgRyLeNBFeQy8huidGqTyLDWXZ_wGE78s
+
+
+when I click on the hamburger I get the following error message 
+
+TypeError: Cannot read property 'classList' of null
+MapBar._this.showHide
+C:/source/monas-neighborhood-map/src/components/MapBar.js:9
+   6 | export default class MapBar extends Component {	
+   7 | 	showHide=()=>{
+   8 | 			const mapBar = document.getElementById('mapBar');
+>  9 | 			mapBar.classList.toggle('hide');
+  10 | 			
+  11 | 	}
+  12 | 	// Hamburger button
+View compiled
+▶ 18 stack frames were collapsed.
+
+[React/Redux Render Error: ‘TypeError: Cannot read property [propertyName] of null’](https://medium.com/@justintulk/react-redux-render-error-typeerror-cannot-read-property-propertyname-of-null-c3292137ccf7)
