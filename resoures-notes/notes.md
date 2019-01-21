@@ -465,3 +465,9 @@ https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-page
 need to check this out 
 
 https://www.esri.com/en-us/arcgis/developers/api-developer-sign-up?adumkts=marketing&adupro=ArcGIS_for_Developers&aduc=advertising&adum=social&aduSF=facebook&utm_Source=advertising&aduca=dg_developer_api&aduco=flexible_pricing&adupt=lead_gen&aducop=no_copy&adusz=1200x628&sf_id=701f2000000rp4FAAQ&fbclid=IwAR01N75mDcgJvUdU-97509V7gp_xsIu7QggaDqStYKDW4xbZmYNTr6sGclI
+
+1/21/2018
+
+Submitted for review 
+need to followup on this 
+https://discussions.udacity.com/t/any-way-to-reduce-infowindow-content-on-mobile/40352/14
