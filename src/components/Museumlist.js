@@ -1,3 +1,6 @@
+// This is all the information for the list in the sidebar/navbar
+// and all of the actions that should go with it
+
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import './../App.css';

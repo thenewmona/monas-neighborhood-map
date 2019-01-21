@@ -456,4 +456,12 @@ Worked with Robert Allen tonight , still can not get my search features to work
 or my venues to animate the markers 
 Gonna work some more on the filters tomorrow 
 
+[ReactJS: TypeError: this.props.onGoogleSignIn is not a function](https://stackoverflow.com/questions/38808684/reactjs-typeerror-this-props-ongooglesignin-is-not-a-function)
+
+https://www.reddit.com/r/reactjs/comments/6fd6nl/keep_getting_error_thispropsonsearch_in_not_a/
+
 https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89?fbclid=IwAR0PzfnTHiWV4eYHlJrtbDfM6G15yPMJB-f7B_OWutZ9GWIlN0d4deAV6Lc
+
+need to check this out 
+
+https://www.esri.com/en-us/arcgis/developers/api-developer-sign-up?adumkts=marketing&adupro=ArcGIS_for_Developers&aduc=advertising&adum=social&aduSF=facebook&utm_Source=advertising&aduca=dg_developer_api&aduco=flexible_pricing&adupt=lead_gen&aducop=no_copy&adusz=1200x628&sf_id=701f2000000rp4FAAQ&fbclid=IwAR01N75mDcgJvUdU-97509V7gp_xsIu7QggaDqStYKDW4xbZmYNTr6sGclI

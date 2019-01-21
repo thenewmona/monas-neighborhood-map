@@ -1,12 +1,11 @@
-// This is the container for museum list , the search box , and hamburger
-// and all the actions that go with it
-
 import React, { Component } from 'react';
 // import listMuseums from './listMuseums';
 //  import Museumlist from './Museumlist';
 
 
 export default class MapBar extends Component {	
+
+    
 	showHide=()=>{
 			const mapBar = document.getElementById('mapBar');
 			mapBar.classList.toggle('hide');
