@@ -10,26 +10,56 @@ export default class Museumlist extends React.Component {
 <h2>Museum List</h2>
 
 <ol className='listMuseums'>
-<a href="https://www.foursquare.com" target="blank"></a>
+ <a href="https://www.foursquare.com" target="blank"></a>
 
-{this.props && this.props.museums.map((museum) =>
-    <li id={`museums-${museum.venue.id}`} tabIndex="0"
-     role="Menuitem" aria-labelledby={`venue-${museum.venue.id}-name Sidebar-heading`} 
-    key={museum.venue.id} onClick={() => this.props.onVenueClick(museum.venue.id)} 
-    className={this.props.selectedVenueId === museum.venue.id ? 'selected' : ''}>
-    <label id={`museums-${museum.venue.id}-name`}>{museum.venue.name}</label> 
-</li>
-)}
-</ol >
-</div>
+ {this.props && this.props.museums.map((museum) =>
+     <li id={`museums-${museum.venue.id}`} tabIndex="0"
+      role="Menuitem" aria-labelledby={`venue-${museum.venue.id}-name Sidebar-heading`} 
+     key={museum.venue.id} 
+     onClick={() => this.props.onMuseumClick(museum.venue.id)} 
+     className={this.props.selectedVenueId === museum.venue.id ? 'selected' : ''}>
+     <label id={`museums-${museum.venue.id}-name`}>{museum.venue.name}</label> 
+ </li>
+ )}
+ </ol >
+ </div>
 
-        )};
-}
+         )};
+ }
         
             
      
 
 
+// export default class Museumlist extends React.Component {
+//     render() {//https://reactjs.org/docs/rendering-elements.html
+
+//         // onMuseumClick(museum)
+
+//         return (
+// <div className='side-bar'>
+// <h2>Museum List</h2>
+
+// <ol className='listMuseums'>
+// <a href="https://www.foursquare.com" target="blank"></a>
+
+// {this.props && this.props.museums.map((museum) =>
+//     <li id={`museums-${museum.venue.id}`} tabIndex="0"
+//      role="Menuitem" aria-labelledby={`venue-${museum.venue.id}-name Sidebar-heading`} 
+//     key={museum.venue.id} 
+//     onClick={() => this.props.onMuseumClick(museum.venue.id)} 
+//     className={this.props.selectedVenueId === museum.venue.id ? 'selected' : ''}>
+//     <label id={`museums-${museum.venue.id}-name`}>{museum.venue.name}</label> 
+// </li>
+// )}
+// </ol >
+// </div>
+
+//         )};
+// }
+        
+            
+     
 
 {/* // const toolbar = props =>  (
 //     <header>

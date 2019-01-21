@@ -28,23 +28,6 @@ export default class MapBar extends Component {
 		)
 	}
 }		
-	// search field box  on Mapbar 
-	// <Museumlist /> 
-
-// render() {
-// 	return (
-// 		<div className='searchBox'>
-// 		<input type={'search'} id={'search'} 
-// 		aria-label='Filter location by name' tabIndex='0'
-// 	    onChange={this.handleSearch} placeholder={'Filter Museums'}/>
-		
-// 		</div>
- 
-// 	);
 	
-// }
-// };
-
-
 
 
