@@ -451,3 +451,9 @@ View compiled
 ▶ 18 stack frames were collapsed.
 
 [React/Redux Render Error: ‘TypeError: Cannot read property [propertyName] of null’](https://medium.com/@justintulk/react-redux-render-error-typeerror-cannot-read-property-propertyname-of-null-c3292137ccf7)
+
+Worked with Robert Allen tonight , still can not get my search features to work 
+or my venues to animate the markers 
+Gonna work some more on the filters tomorrow 
+
+https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89?fbclid=IwAR0PzfnTHiWV4eYHlJrtbDfM6G15yPMJB-f7B_OWutZ9GWIlN0d4deAV6Lc
