@@ -1,31 +1,32 @@
+// https://medium.freecodecamp.org/how-to-write-your-first-react-js-component-d728d759cabc
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import './App.css';
-// import Mapcontent from './components/Mapcontent/Mapcontent';
-// import Mapfooter from './components/Mapfooter/Mapfooter'
-
-
-
+import MapHeader from './components/MapHeader'
+import MapBar from './components/MapBar'
+import Mapfooter from './components/Mapfooter'
+// import ReactDOM from 'react-dom';
+ 
 import axios from 'axios'
+import Museumlist from './components/Museumlist';
 
 class App extends Component {
-
-
   state = {//per drunkenkismister 12/18/2018
-        museums:[],
-  map:null,
-  infoWindow:null,
-  }
+  museums:[],
 
+  // doug browns walkthrough
+  // map:null,
+  // infoWindow:null,
+  // markers: [],
+  // activeMarker: null,
+  // showingInfoWindow: false
+  }
   componentDidMount() {
     this.getMuseums();//calls the foursquare API
   }
-
   renderMap = () => {
     scriptLoader("https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap")
     window.initMap = this.initMap
   }
-
   getMuseums = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?";
     const parameters = {
@@ -33,9 +34,8 @@ class App extends Component {
       client_secret: "RE4NWN115A1JETCAKMHQTZZ4VOLCMTK2LZNZUPN5K1PEEKOX",
       query: "museums",
       near:"Grand Rapids",
-      v:"201849548"
+      v:"201849548" 
     }
-
     axios.get(endPoint + new URLSearchParams(parameters))
       .then(response => {
         this.setState({
@@ -43,35 +43,27 @@ class App extends Component {
         }, this.renderMap())
       })
       .catch(error => {
-        alert(`Sorry, for the incovience`)
+        alert(`Sorry, for the inconvience`)
         console.log("apologize for the inconvience the following error has occured " + error)
       })
-
   }
-
   initMap = () => {
-
     // Create A Map
    const map = new window.google.maps.Map(document.getElementById('map'), {
     center: { lat: 42.96, lng: -85.7053 },//my home wyoming, mi
       zoom: 8
       // url:"https://image.flaticon.com/icons/svg/1243/1243565.svg"
     })
-
     // Create An InfoWindow
     let infowindow = new window.google.maps.InfoWindow()
-
+    window.infoWindow=infowindow;
     //marker boundaries
     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
-
     // let bounds = new window.google.maps.LatLngBounds();
-
-
     // Display Dynamic Markers
     this.state.museums.map(grMuseums => {
       var contentString = `${grMuseums.venue.name}`
       
-
       // Create A Marker
       var marker = new window.google.maps.Marker({        
         position: {lat: grMuseums.venue.location.lat , lng: grMuseums.venue.location.lng},
@@ -79,41 +71,50 @@ class App extends Component {
         title: grMuseums.venue.name,
        
       })
-
       //extending the marker bounds 
       // let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
       // bounds.extend(markLoc)
-
       // marker eventlistener
+      
       marker.addListener('click', function() {
-
         // Change the content
         infowindow.setContent(contentString)
-
         // Open An InfoWindow
         infowindow.open(map, marker)
+        // bouncy marker 
+        marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        setTimeout(() => marker.setAnimation(null), 2100);
       })
+
+      //need to close infoWindow ?
     //   map.fitBounds(bounds);
 		//  map.panTo(bounds.getCenter());
 		//  map.setZoom(map.getZoom()-1); 
 		//  return marker;
-
     })
-
     
-
   }
-
   render() {
     return (
-      <main>
-       <div clasname = 'museumMap' id="map"></div>
-            
+      <main class=".app">
+< MapHeader />  
+     
+          <div className='sideBar'>
+          <MapBar /> 
+          <Museumlist{...this.state}/>
+          </div>     
+       {/* < Museumlist/> */}
+          
+
+       <div clasname = 'museumMap' id="map">
+       
+       </div>    
+       < Mapfooter />     
+
       </main>
     )
   }
 }
-
 function scriptLoader(url) {
   let index  = window.document.getElementsByTagName("script")[0]
   let script = window.document.createElement("script")
@@ -122,5 +123,4 @@ function scriptLoader(url) {
   script.defer = true
   index.parentNode.insertBefore(script, index)
 }
-
 export default App;

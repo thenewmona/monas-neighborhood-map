@@ -302,4 +302,192 @@ learned how to destruct, use `.map` and `bind`
 [JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 
 [Simplify your JavaScript – Use .map(), .reduce(), and .filter()](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
+<<<<<<< HEAD
 >>>>>>> f26ffc91f9a2362669d01cceab60ce21edd2c16d
+=======
+
+1/9/2018 
+
+worked with Julian on Brad's react app and went over the map project 
+going to connect with him on friday to work on the map some more
+
+1/11/2018 
+
+got the footer to work with Julian's help , need to do some CSS styling and thinking of moving the footer CSS over to the app.css 
+instead of inlining it the way I have it 
+
+1/12/2019
+Finished Brad's tutorial 
+Wanting to do my header like he did it in the tutorial 
+
+need to get better at the Render Props 
+[Render Props](https://reactjs.org/docs/render-props.html)
+
+1/13/2018 
+Got my footer working now trying to get my header working 
+Need to cut out some of the components, this is just confusing me to much 
+
+Installed fontawesome React, needing to use it later for the markers, hopefully if I can get it to work
+
+[FontAwesome React](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+[landmark icon](https://fontawesome.com/icons/landmark?style=solid)
+
+## getting this error message 
+
+You should not use <Link> outside a <Router>
+https://github.com/ReactTraining/react-router/issues/6140
+
+https://github.com/ReactTraining/react-router/issues/3889
+
+Trying to figure out what is going on with my header, tried to do some CSS, but when I go to import app.css, get this error message 
+
+./src/components/Header/MapHeader.js
+Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map\src\components\Header'
+[React Lifecycle Methods – A Deep Dive](https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript
+https://programmingwithmosh.com/javascript/react-lifecycle-methods/?utm_sq=fz112xsqcp&utm_source=Facebook&utm_medium=social&utm_campaign=ProgrammingwithMosh&utm_content=JavaScript)
+
+got header at the top, got my hamburger to start my SideBar, or MapBar as I am calling the component 
+Still having issue with the CSS file, but I may just do inline CSS and call it a day 
+
+1/14/2019
+
+[VIDEOS on infowindows and markers]( https://www.youtube.com/playlist?list=PLZsyx8KUD6eJ85cckEPTe_Gu6Dk7TwAdu)
+
+1/16/2019
+
+[Udacity bounds and infoWindow](https://classroom.udacity.com/nanodegrees/nd001/parts/f4471fff-fffb-4281-8c09-2478625c9597/modules/a2527452-bb9f-431c-bfa7-a20b17992650/lessons/8304370457/concepts/83122494450923)
+
+having issues with the app.css, keep getting this error message 
+`./src/components/Museumlist/Museumlist.js
+Module not found: Can't resolve '../App.css' in 'C:\source\monas-neighborhood-map\src\components\Museumlist'`
+
+`./src/components/footer/Mapfooter.js
+Module not found: Can't resolve './App.css' in 'C:\source\monas-neighborhood-map\src\components\footer'`
+
+## SlackChat
+
+americanman[FEND]   [Today at 8:55 PM]
+@thenewmona {FEND}Michigan
+inside of MatHeader uncomment it and use
+```import './../../App.css';```
+is going to work
+3 replies
+
+thenewmona {FEND}Michigan   [11 minutes ago]
+thanks, @americanman[FEND] that worked, but why do I have to put so many `./`
+
+americanman[FEND]   [7 minutes ago]
+MatHeader are not in the same directory as App.css, but are two levels down (edited)
+
+thenewmona {FEND}Michigan   [3 minutes ago]
+ok thanks
+
+[activeInfoWindow](http://itpscan.ca/examples/google_maps/maps_02/)
+Trying to fix the markers, and get the information for the sidebar, of course I have broke the project again 
+
+Failed to compile
+./src/App.js
+  Line 129:  Parsing error: Unexpected token, expected ";"
+
+  127 | 		//  return marker;
+  128 |     
+> 129 |     })
+      |      ^
+  130 | 
+  131 |     
+  132 | 
+
+  so I will need to fix this tomorrow, and hopefully be able to populate the sidebar information and submit on friday 
+
+  more errors 
+
+./src/App.js
+  Line 98:  Parsing error: Unexpected token
+
+   96 |   }
+   97 |     // Create An InfoWindow
+>  98 |     let infowindow = new window.google.maps.InfoWindow()
+      |         ^
+   99 | 
+  100 |     //marker boundaries
+  101 |     //https://www.webucator.com/how-to/how-use-latlngbounds-google-maps.cfm
+
+
+1/17/2018
+
+Back at it again, can not figure out what it is that I am missing 
+To many comments and deletions 
+not understanding why it does not like the `{` after the render on line 156 why it wants `;`
+
+Failed to compile
+./src/App.js
+  Line 156:  Parsing error: Unexpected token, expected ";"
+
+  154 |   
+  155 | 
+> 156 |   render() {
+      |            ^
+  157 |     return (
+  158 | 
+  159 |      
+This error occurred during the build time and cannot be dismissed.
+
+Got my map back to almost where it was before, 
+
+## anchor-has-content
+Enforce that anchors have content and that the content is accessible to screen readers. Accessible means that it is not hidden using the aria-hidden prop. Refer to the references to learn about why this is important.
+[Anchor](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md)
+
+1/19/2018
+
+Gonna get this project to a point that I can submit today and see what the reviewers say
+cleaning up my project, got rid of all the folders they were just confusing me, just put all the components back in component folder instead. 
+
+1/20/2019
+
+Got some help from Robert, working through the suggestions that he gave me 
+
+https://snag.gy/N6n7qv.jpg?fbclid=IwAR02XgCEawBpQDaBS_R29egrqeww6n3VKAvAGvLT_g88k395TtscSJIkdUU
+
+https://snag.gy/GqkRZK.jpg?fbclid=IwAR2TM07lgZsQWWMeQ6-2Am7OmOxvNn6w8CDTh4qoyS-n-B_jXxz3VSRPKcs
+
+https://snag.gy/PLGVTk.jpg?fbclid=IwAR1DmLVBz_r-ewz1ZBIpXPkAkuMgRyLeNBFeQy8huidGqTyLDWXZ_wGE78s
+
+
+when I click on the hamburger I get the following error message 
+
+TypeError: Cannot read property 'classList' of null
+MapBar._this.showHide
+C:/source/monas-neighborhood-map/src/components/MapBar.js:9
+   6 | export default class MapBar extends Component {	
+   7 | 	showHide=()=>{
+   8 | 			const mapBar = document.getElementById('mapBar');
+>  9 | 			mapBar.classList.toggle('hide');
+  10 | 			
+  11 | 	}
+  12 | 	// Hamburger button
+View compiled
+▶ 18 stack frames were collapsed.
+
+[React/Redux Render Error: ‘TypeError: Cannot read property [propertyName] of null’](https://medium.com/@justintulk/react-redux-render-error-typeerror-cannot-read-property-propertyname-of-null-c3292137ccf7)
+
+Worked with Robert Allen tonight , still can not get my search features to work 
+or my venues to animate the markers 
+Gonna work some more on the filters tomorrow 
+
+[ReactJS: TypeError: this.props.onGoogleSignIn is not a function](https://stackoverflow.com/questions/38808684/reactjs-typeerror-this-props-ongooglesignin-is-not-a-function)
+
+https://www.reddit.com/r/reactjs/comments/6fd6nl/keep_getting_error_thispropsonsearch_in_not_a/
+
+https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89?fbclid=IwAR0PzfnTHiWV4eYHlJrtbDfM6G15yPMJB-f7B_OWutZ9GWIlN0d4deAV6Lc
+
+need to check this out 
+
+https://www.esri.com/en-us/arcgis/developers/api-developer-sign-up?adumkts=marketing&adupro=ArcGIS_for_Developers&aduc=advertising&adum=social&aduSF=facebook&utm_Source=advertising&aduca=dg_developer_api&aduco=flexible_pricing&adupt=lead_gen&aducop=no_copy&adusz=1200x628&sf_id=701f2000000rp4FAAQ&fbclid=IwAR01N75mDcgJvUdU-97509V7gp_xsIu7QggaDqStYKDW4xbZmYNTr6sGclI
+
+1/21/2018
+
+Submitted for review 
+need to followup on this 
+https://discussions.udacity.com/t/any-way-to-reduce-infowindow-content-on-mobile/40352/14
+>>>>>>> c834fc4720ccea1cc3f3ddd081d410999f4fe51d

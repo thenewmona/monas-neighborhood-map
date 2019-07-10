@@ -27,9 +27,6 @@ ________________________________________________________________________________
 
 [Building A Sticky Sidebar In React (3/3)](https://www.youtube.com/watch?v=blFjpsV7pA4)
 
-<<<<<<< HEAD
-[Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
-=======
 [Introduction to ES6 Promises – The Four Functions You Need To Avoid Callback Hell](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
 
 [Component-based state management for React](http://jamesknelson.com/component-based-state-management-react/)
@@ -52,4 +49,3 @@ ________________________________________________________________________________
 
 
 
->>>>>>> 25975c62c97f3e771dbcb6aa647c2b35db8c3e3e
