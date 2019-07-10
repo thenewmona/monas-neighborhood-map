@@ -70,10 +70,35 @@ Got my markup done, it's working ok, now trying to figure out how to compile it 
 Tried to put all the cordinates into App.js, and had over 175 errors 
 installed google-maps-react - reactDom and reactRouter 
 
+can not do a branch checkout to get back to the master branch 
+Had issues last night, when I was trying to show dan my project because I could not see the map api branch 
+but now I can push/pull/checkout 
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git map-api
+error: src refspec map-api does not match any.
+error: failed to push some refs to 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git
+fatal: Invalid refspec 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git push git push --set-upstream https://github.com/thenewmona/myNeighborhood-Maps.git
+fatal: Invalid refspec 'https://github.com/thenewmona/myNeighborhood-Maps.git'
+
+thene@DESKTOP-KGLOT7J MINGW64 ~/Google Drive/GWG phase 2/GWGprojects/myneighborhood-maps (map-api)
+$ git checkout master
+fatal: unable to read tree de3f64d50b21375eef6e5ad1e3312c2190b9df81
+
+https://stackoverflow.com/questions/20870895/how-to-diagnose-and-fix-git-fatal-unable-to-read-tree?lq=1
+just going to start over from scratch, this project is foobared 
+
 12/13/2018 
 recreating project - to many issues to troubleshoot 
 starting fresh again 
 new project name is monas-neighborhood-map
+<<<<<<< HEAD
 
 following [Elharony walkthrough](https://www.youtube.com/watch?v=ywdxLNjhBYw&t=204s) 
 Finally got my app.js setup, and my map is rendering 
@@ -88,3 +113,193 @@ webpackHotDevClient.js:120 ./src/App.js
   `Line 4:   'logo' is defined but never used          no-unused-vars`
 
   `Line 21:  'map' is assigned a value but never used  no-unused-vars`
+=======
+following [Elharony walkthrough](https://www.youtube.com/watch?v=ywdxLNjhBYw&t=204s) 
+
+12/14/2018 
+
+worked with Dan on the project 
+There were to many errors in the project so recreated the project, and put it on the c drive and took it out of Google drive 
+Recloned the project hope to get rid of the GIT errors 
+
+12/15/2018
+activated my extension and starting on the REACT lesson per Dan's suggestions 
+
+12/17/2018
+
+added foursquares API
+have the markers for GR museums showing up 
+Sent in a request for Athlinks API access 
+tomorrow infoWindow
+
+12/18/2018
+
+Created infoWindow branch having some issues and did not want to mess up my master whick is working perfect
+need to clean up some of my comments 
+I am still error free 
+12/18/2018
+
+getting a info window not defined error message
+
+./src/App.js
+  Line 72:  'infoWindow' is not defined  no-undef
+  Line 74:  'infoWindow' is not defined  no-undef
+
+12/19/2018
+
+This is getting really frustrating, had this thing working at work, but I am now still getting infoWindow not defined at home 
+This is driving me crazy 
+
+12/20/2018
+
+[React Bounds Element Queries in React](https://www.npmjs.com/package/react-bounds)
+
+[Create Google Maps with markers for places](https://blog.dnnsharp.com/1001/30-create-google-maps-with-markers-for-places)
+
+[google reference for marker boundaries](https://developers.google.com/maps/documentation/javascript/reference/map?fbclid=IwAR1gmPJXyxTRZFlxR5osZUYEFM9xxFIvFsa5LlKOGg6whXSmnYk-LkIGqzo#Map.getBounds)
+getBounds	
+getBounds()
+Parameters:  None
+Return Value:  LatLngBounds
+Returns the lat/lng bounds of the current viewport. If more than one copy of the world is visible, the bounds range in longitude from -180 to 180 degrees inclusive. If the map is not yet initialized (i.e. the mapType is still null), or center and zoom have not been set then the result is null or undefined.
+
+[error reporting ](https://stackoverflow.com/questions/9860823/js-loading-script-error)
+
+Set up bounds, 
+getting the following error message 
+
+  73 |      })
+  74 | 
+  75 |      //extending the marker bounds 
+> 76 |      let markLoc = new window.google.maps.LatLng(marker.postion.lat(), marker.postion.lng());
+     | ^  77 |      bounds.extend(markLoc)
+  78 | 
+  79 |      // marker eventlistener
+View compiled
+App._this.initMap
+C:/source/monas-neighborhood-map/src/App.js:64
+  61 | 
+  62 | 
+  63 |    // Display Dynamic Markers
+> 64 |    this.state.museums.map(grMuseums => {
+     | ^  65 |      var contentString = `${grMuseums.venue.name}`
+  66 | 
+  67 |      // Create A Marker
+
+  ## Console error 
+
+  Uncaught (in promise) TypeError: Cannot read property 'lat' of undefined
+    at App.js:76
+    at Array.map (<anonymous>)
+    at App._this.initMap (App.js:64)
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+    at js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap:123
+localhost/:1 Access to fetch at 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA&callback=initMap' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+[Error: No 'Access-Control-Allow-Origin' header is present on the requested resource ](https://community.powerbi.com/t5/Developer/Error-No-Access-Control-Allow-Origin-header-is-present-on-the/td-p/350280)
+
+
+12/21/2018
+
+[Neighborhood App - Part 1: Design and Load Google Map API](https://www.youtube.com/watch?v=CCv8JrGVgYQ&list=PLxNdTlMoqzLIajvLvQR9OwcgxNK0GLpmL&index=13)
+
+12/22/2018
+[ReactJS - Build a Responsive Navigation Bar & Side Drawer Tutorial](https://www.youtube.com/watch?v=l6nmysZKHFU)
+
+Trying to get my side bar and hamburger working 
+getting the following error message 
+
+Module not found: Can't resolve './components/Toolbar/' in 'C:\source\monas-neighborhood-map\src'
+
+12/23/2018
+
+Still having issues creating my components 
+Went through Ryan's walkthrough, and I am not understanding it. 
+
+getting this error this morning 
+
+## Failed to compile
+./src/App.js
+Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
+
+[Can’t find the module in React.js](https://www.freecodecamp.org/forum/t/cant-find-the-module-in-react-js/234237)
+
+[Module not found: Can't resolve 'react' #2534](https://github.com/facebook/create-react-app/issues/2534)
+
+## Console error message 
+-------------------------------------------------------------
+
+Uncaught Error: Cannot find module './components/Mapcontent'
+    at webpackMissingModule (App.css?da7c:45)
+    at Module../src/App.js (App.css?da7c:45)
+    at __webpack_require__ (bootstrap:782)
+    at fn (bootstrap:150)
+    at Module../src/index.js (index.css?02e3:45)
+    at __webpack_require__ (bootstrap:782)
+    at fn (bootstrap:150)
+    at Object.0 (serviceWorker.js:135)
+    at __webpack_require__ (bootstrap:782)
+    at checkDeferredModules (bootstrap:45)
+    at Array.webpackJsonpCallback [as push] (bootstrap:32)
+    at main.chunk.js:1
+webpackMissingModule @ App.css?da7c:45
+./src/App.js @ App.css?da7c:45
+__webpack_require__ @ bootstrap:782
+fn @ bootstrap:150
+./src/index.js @ index.css?02e3:45
+__webpack_require__ @ bootstrap:782
+fn @ bootstrap:150
+0 @ serviceWorker.js:135
+__webpack_require__ @ bootstrap:782
+checkDeferredModules @ bootstrap:45
+webpackJsonpCallback @ bootstrap:32
+(anonymous) @ main.chunk.js:1
+index.js:1452 ./src/App.js
+Module not found: Can't resolve './components/Mapcontent' in 'C:\source\monas-neighborhood-map\src'
+
+So much for submitting by Christmas 
+
+12/27/2018
+
+took a few days off to regroup, and did some tutorials 
+working on scrimba's react course right now https://scrimba.com/p/p7P5Hd/cQ7natG tyring to get my components to work properly 
+
+Feeling really stupid right now, did not put the full path in for the import I am back to no errors now 
+going to bed now
+
+12/28/2018
+
+https://reactjs.org/docs/rendering-elements.html
+
+12/31/2018 
+
+Year is almost done, and I am not seeing and end in sight with this project 
+Trying to get through the frustration of this project 
+
+Still working on setting up my components 
+
+Every time I go 
+
+`class Content extends React.Comonent {
+  render() {
+    return <"/>;
+  }
+}`
+
+I keep getting an error message 
+
+I am also getting this error message in `Mapcontent.js`
+
+**Expected an assignment or function call and instead saw an expression.**
+
+1/8/2018
+
+Time to knock this thing out 
+worked on Brad Traversy's [React JS Crash Course - 2019](https://www.youtube.com/watch?v=sBws8MSXN7A&feature=push-u-sub&attr_tag=zVn0WchU7lSlcy1b%3A6)
+
+learned how to destruct, use `.map` and `bind` 
+
+[JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+
+[Simplify your JavaScript – Use .map(), .reduce(), and .filter()](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
+>>>>>>> f26ffc91f9a2362669d01cceab60ce21edd2c16d
